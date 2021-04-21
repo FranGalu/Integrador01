@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="trabajo-integrador/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="trabajo-integrador/img/WhatsApp Image 2021-04-08 at 12.48.25.jpeg" alt="logo">
+        <img class="logo" src="img/WhatsApp Image 2021-04-08 at 12.48.25.jpeg" alt="logo">
         <div class="b">
            <nav>
-               <a href="index.html">HOME</a>
-               <a href="playlist.html">PLAYLIST</a>
-               <a href="generos.html">GENEROS</a>  
+               <a class="c" href="index.html">HOME</a>
+               <a class="c" href="playlist.html">PLAYLIST</a>
+               <a class="c" id="d" href="generos.html">GENEROS</a>  
 
            </nav>
         </div>
@@ -24,65 +24,112 @@
 
     <section>
         <article>
-            <link rel="detalle-cancion" href="detalle-cancion.html">
-            <h2>Canciones</h2>
+
+            <h2 class="titulo">Canciones</h2>
+
             <ul class="default">
-                   <li>   <p> Despacito (Luis Fonsi)</p>
-                    <img class="principal" src="trabajo-integrador/img/despacito.jpg" alt="foto">
-              </li>   
-                <li><p> La Cancion (J Balvin)</p>
-                    <img class="principal" src="trabajo-integrador/img/lacancion.jpg" alt="foto">
-            </li>
-                <li>   <p>Dakiti (Bad Bunny)</p>
-                    <img class="principal" src="trabajo-integrador/img/dakiti.jpg" alt="foto">
+                <li class="lista"><p class="nombres"> Despacito (Luis Fonsi)</p>
+                    <a href="detalle-cancion.html">
+                        <img class="principal" src="img/despacito.jpg" alt="foto">
+                    </a>
+              </li> 
+                 
+                <li class="lista"><p class="nombres"> La Cancion (J Balvin)</p>
+                    <a href="detalle-cancion.html">
+                        <img class="principal" src="img/lacancion.jpg" alt="foto">
+                    </a>
               </li>
-                <li><p> Tatto (Rauw Alejandro)</p>
-                    <img class="principal" src="trabajo-integrador/img/tatto.jpg" alt="foto">
-                </li>
-                <li>  <p> Hawai (Maluma)</p>
-                    <img class="principal" src="trabajo-integrador/img/hawai.jpg" alt="foto">
+
+                <li class="lista"><p class="nombres">Dakiti (Bad Bunny)</p>
+                    <a href="detalle-cancion.html">
+                        <img class="principal" src="img/dakiti.jpg" alt="foto">
+                    </a>
+              </li>
+
+                <li class="lista"><p class="nombres"> Tatto (Rauw Alejandro)</p>
+                    <a href="detalle-cancion.html">
+                        <img class="principal" src="img/tatto.jpg" alt="foto">
+                    </a>
+              </li>
+
+                <li class="lista"><p class="nombres"> Hawai (Maluma)</p>
+                    <a href="detalle-cancion.html">
+                        <img class="principal" src="img/hawai.jpg" alt="foto">
+                    </a>
                </li>
+
             </ul>
        
         </article>
         <article>
-            <h2>Albumes</h2>
+            <h2 class="titulo">Albumes</h2>
             <ul class="default">
                 
-                <li> <p>Barrio Fino (Daddy Yankee)</p>
-                    <img class="principal" src="trabajo-integrador/img/barriofino.jpg" alt="foto"> 
-            </li> 
-                <li>   <p>The Last Don (Don Omar)</p>
-                    <img class="principal" src="trabajo-integrador/img/thelastdon.jpg" alt="foto">
-              </li>
-                <li>      <p>Calle 13 (Calle 13)</p>
-                    <img class="principal" src="trabajo-integrador/img/calle13.jpg" alt="foto">
-           </li>
-                <li>  <p>La Revolución (Wisin Yandel)</p>
-                    <img class="principal" src="trabajo-integrador/img/larevolucion.jpg" alt="foto">
-              </li>
-                <li> <p>Miami (Pitbull)</p>
-                    <img class="principal" src="trabajo-integrador/img/miami.jpg" alt="foto">
-              </li>
+                <li class="lista"><p class="nombres">Barrio Fino (Daddy Yankee)</p>
+                    <a href="detalle-album.html">
+                    <img class="principal" src="img/barriofino.jpg" alt="foto"> 
+                    </a>
+                </li> 
+
+                <li class="lista"><p class="nombres">The Last Don (Don Omar)</p>
+                    <a href="detalle-album.html">
+                    <img class="principal" src="img/thelastdon.jpg" alt="foto">
+                    </a>
+                </li>
+
+                <li class="lista"><p class="nombres">Calle 13 (Calle 13)</p>
+                    <a href="detalle-album.html">
+                    <img class="principal" src="img/calle13.jpg" alt="foto">
+                    </a>
+                </li>
+
+                <li class="lista"><p class="nombres">La Revolución (Wisin Yandel)</p>
+                    <a href="detalle-album.html">
+                    <img class="principal" src="img/larevolucion.jpg" alt="foto">
+                    </a>
+                </li>
+
+                <li class="lista"><p class="nombres">Miami (Pitbull)</p>
+                    <a href="detalle-album.html">
+                    <img class="principal" src="img/miami.jpg" alt="foto">
+                    </a>
+                </li>
+
             </ul>
         </article>
         <article>
-            <h2>Artistas</h2>
+
+            <h2 class="titulo">Artistas</h2>
             <ul class="default">
-                <li><p>Daddy Yankee</p>
-                    <img class="principal" src="trabajo-integrador/img/daddyyankee.jpg" alt="foto">
+
+                <li class="lista"><p class="nombres">Daddy Yankee</p>
+                    <a href="detalle-artista.html">
+                    <img class="principal" src="img/daddyyankee.jpg" alt="foto">
+                    </a>
                 </li>
-                <li> <p>J Balvin</p>
-                    <img class="principal" src="trabajo-integrador/img/jbalvin.jpg" alt="foto">
+
+                <li class="lista"> <p class="nombres">J Balvin</p>
+                    <a href="detalle-artista.html">
+                    <img class="principal" src="img/jbalvin.jpg" alt="foto">
+                    </a>
                </li>
-                <li><p>Ozuna</p>
-                    <img class="principal" src="trabajo-integrador/img/ozuna.jpg" alt="foto">
+
+                <li class="lista"><p class="nombres">Ozuna</p>
+                    <a href="detalle-artista.html">
+                    <img class="principal" src="img/ozuna.jpg" alt="foto">
+                    </a>
                 </li>
-                <li><p> Bad Bunny</p>
-                    <img class="principal" src="trabajo-integrador/img/badbunny.jpg" alt="foto">
+
+                <li class="lista"><p class="nombres"> Bad Bunny</p>
+                    <a href="detalle-artista.html">
+                    <img class="principal" src="img/badbunny.jpg" alt="foto">
+                    </a>
                </li>
-                <li><p>Nicky Jam</p>
-                    <img class="principal" src="trabajo-integrador/img/Nicky_Jam.jpg" alt="foto">
+
+                <li class="lista"><p class="nombres">Nicky Jam</p>
+                    <a href="detalle-artista.html">
+                    <img class="principal" src="img/Nicky_Jam.jpg" alt="foto">
+                    </a>
                 </li>
             </article>
         </div>
@@ -92,15 +139,15 @@
         <h2>Cualquier cosa, no duden en consultar con nosotros!</h2>
         <p>Hecho por: Benja Lanfranco, Franco Galluzo y Candelaria Tallavi</p>
         <ul>
-            <li><img src="trabajo-integrador/img/instagram.jpg" alt="instagram">
+            <li><img class="pie" src="img/instagram.jpg" alt="instagram">
                 <p>Instagram: @benjalanfranco, @francogalluzo y @candetallavi </p>
             </li>
             <li>
-            <img src="trabajo-integrador/img/gmail.jpg" alt="gmail">
+            <img class="pie" src="img/gmail.jpg" alt="gmail">
                 <p>Gmail:candetallavi8@gmail.com, francogalluzo@icloud.com, benjalanfranco@gmail.com  </p>
             </li>
             <li>
-                <img src="trabajo-integrador/img/whatsapp.jpg" alt="whatsapp">
+                <img class="pie" src="img/whatsapp.jpg" alt="whatsapp">
                 <p>WhatsApp; benja:+5491156459121, franco: +5491133077050, cande: +5491157506868</p>
             </li>
         </ul>

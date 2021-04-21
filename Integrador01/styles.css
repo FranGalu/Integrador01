@@ -1,0 +1,73 @@
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #044870;
+}
+.logo{
+    width: 100px;
+    }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url(https://damedembow.com/wp-content/uploads/2019/10/imagen_blog_fondo-1024x611.jpg);
+    background-attachment: fixed;
+    color: snow;
+}
+
+ul.default {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    width: 220px;
+    height: 250px;
+}
+
+.b {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 100px;
+    font-size: 40px;
+}
+
+.c {
+    padding: 0px 60px;
+    border-right: solid 3px black;
+}
+
+#d {border-right: 0px;
+
+}
+
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.pie{
+    width: 50px;
+}
+
+.foot{
+    background-color: blue;
+}
+
+.lista {
+    padding: 0px 0px 40px 0px;
+}
+
+.nombres {
+    margin: 5px 0px;
+}
+
+@media (max-width: 420px) {
+
+}
+
+
