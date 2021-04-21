@@ -4,7 +4,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #044870;
-    width: max-content;
 }
 .logo{
     width: 100px;
@@ -27,11 +26,48 @@ ul.default {
 
 .principal {
     width: 220px;
+    height: 250px;
 }
 
-.b{
+.b {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 100px;
     font-size: 40px;
 }
+
+.c {
+    padding: 0px 60px;
+    border-right: solid 3px black;
+}
+
+#d {border-right: 0px;
+
+}
+
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.pie{
+    width: 50px;
+}
+
+.foot{
+    background-color: blue;
+}
+
+.lista {
+    padding: 0px 0px 40px 0px;
+}
+
+.nombres {
+    margin: 5px 0px;
+}
+
+@media (max-width: 420px) {
+
+}
+
 
