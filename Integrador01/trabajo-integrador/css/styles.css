@@ -1,13 +1,43 @@
-
+/* -------------------- Encabezado de todas las paginas -------------------- */
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #044870;
 }
-.logo{
+
+.logo {
     width: 100px;
-    }
+}
+
+.b {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 100px;
+    font-size: 40px;
+}
+    
+.c {
+    padding: 0px 60px;
+    border-right: solid 3px black;
+}
+
+
+#d {
+    border-right: 0px;
+}
+
+/* -------------------- Footer de todas las paginas -------------------- */
+
+.pie{
+    width: 50px;
+}
+
+.foot{
+    background-color: blue;
+}
+
+
+/* -------------------- index.html -------------------- */
 
 section {
     display: flex;
@@ -16,6 +46,12 @@ section {
     background-image: url(https://damedembow.com/wp-content/uploads/2019/10/imagen_blog_fondo-1024x611.jpg);
     background-attachment: fixed;
     color: snow;
+}
+
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
 }
 
 ul.default {
@@ -29,35 +65,6 @@ ul.default {
     height: 250px;
 }
 
-.b {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    line-height: 100px;
-    font-size: 40px;
-}
-
-.c {
-    padding: 0px 60px;
-    border-right: solid 3px black;
-}
-
-#d {border-right: 0px;
-
-}
-
-.titulo{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    text-align: center;
-}
-
-.pie{
-    width: 50px;
-}
-
-.foot{
-    background-color: blue;
-}
-
 .lista {
     padding: 0px 0px 40px 0px;
 }
@@ -66,8 +73,23 @@ ul.default {
     margin: 5px 0px;
 }
 
-@media (max-width: 420px) {
+/* -------------------- detalle-cancion.html -------------------- */
 
+.dakiti {
+    width: 500px;
+    padding: 40px;
 }
 
+/* -------------------- detalle-album.html -------------------- */
 
+.don {
+    width: 500px;
+    padding: 40px;
+}
+
+/* -------------------- detalle-artista.html -------------------- */
+
+.ozuna {
+    width: 500px;
+    padding: 40px;
+}
