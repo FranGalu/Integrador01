@@ -4,10 +4,12 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #044870;
+    width: fit-content;
+    background-image: url(https://www.wallpapertip.com/wmimgs/70-708412_purple-wall-texture.jpg);
 }
 
 .logo {
-    width: 100px;
+    width: 90px;
 }
 
 .b {
@@ -63,6 +65,7 @@ ul.default {
 .principal {
     width: 220px;
     height: 250px;
+    border-radius: 30%;
 }
 
 .lista {
@@ -92,4 +95,19 @@ ul.default {
 .ozuna {
     width: 500px;
     padding: 40px;
+}
+
+.buscador{
+    margin: 5px;
+    padding: 35px;
+    height: 20px;
+
+}
+
+.buscador input{
+    border-radius: 30px;
+    outline: none;
+    border:oldlace 1px;
+    padding: 0 20px;
+    height: 20px;
 }
