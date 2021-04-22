@@ -1,15 +1,19 @@
-/* -------------------- Encabezado de todas las paginas -------------------- */
+  /* -------------------- Encabezado de todas las paginas -------------------- */
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #044870;
-    width: fit-content;
     background-image: url(https://www.wallpapertip.com/wmimgs/70-708412_purple-wall-texture.jpg);
+
+}
+
+body {
+    margin: 0px;
 }
 
 .logo {
     width: 90px;
+    border-radius: 50%;
 }
 
 .b {
@@ -21,6 +25,7 @@ header {
 .c {
     padding: 0px 60px;
     border-right: solid 3px black;
+    color: black;
 }
 
 
@@ -32,10 +37,22 @@ header {
 
 .pie{
     width: 50px;
+    border-radius: 30%;
+    margin-right: 20px;
+    margin-bottom: 15px;
 }
 
 .foot{
-    background-color: blue;
+    list-style-type: none;
+}
+
+.abajo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ultimo {
+    text-align: center;
 }
 
 
@@ -111,3 +128,31 @@ ul.default {
     padding: 0 20px;
     height: 20px;
 }
+
+/* -------------------- generos.html -------------------- */
+
+.generos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.imagenes {
+   width: 275px;
+   height: 300px;
+   border-radius: 30px;
+
+}
+
+.t{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h {
+    width: 275px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+/* -------------------- Responsive -------------------- */
