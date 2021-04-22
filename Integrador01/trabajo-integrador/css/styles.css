@@ -6,10 +6,13 @@ header {
     background-image: url(https://images.template.net/wp-content/uploads/2016/04/26062247/Shades-in-Purple-Background-Dwonload.jpg);
     background-size:1000px;
     outline: white;
+    
+
 }
 
 body {
     margin: 0px;
+    border: solid 7px black; 
 }
 
 .logo {
@@ -71,7 +74,7 @@ section {
 .titulo{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    text-align: center;
+    
 }
 
 ul.default {
@@ -88,12 +91,28 @@ ul.default {
 
 .lista {
     padding: 0px 0px 40px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    justify-content: end;
+    
 }
 
 .nombres {
-    margin: 5px 0px;
+    margin: 5px 6px 5px 0px;
+    font-size: 20px ;
+    padding-top: 4px;
 }
+ 
+.play {
+ width: 50px ;
+ 
 
+}
+.todo {
+    border: solid 7px black; 
+    
+}
 /* -------------------- detalle-cancion.html -------------------- */
 
 .dakiti {
@@ -106,6 +125,7 @@ width: 50px;
 }
 .D {
     align-content: center;
+
 }
 
 /* -------------------- detalle-album.html -------------------- */
@@ -123,13 +143,24 @@ width: 50px;
 .don1  { 
     border-bottom: 2px solid white;
     justify-content: space-between;
-  
-    
+
 
    }
+   .don2 {
+       width: 600px;
+   }
+
+   .don3 {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row ;
+   }
+   .listado{
+       background-color: rgb(24, 4, 27) ;
+   }
 .dondon {
-    float: left;
-   
+    margin-right: 50px;
+    font-size: 25px;
 }
 /* -------------------- detalle-artista.html -------------------- */
 
