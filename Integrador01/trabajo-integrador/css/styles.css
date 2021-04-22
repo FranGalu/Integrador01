@@ -3,8 +3,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url(https://www.wallpapertip.com/wmimgs/70-708412_purple-wall-texture.jpg);
-
+    background-image: url(https://images.template.net/wp-content/uploads/2016/04/26062247/Shades-in-Purple-Background-Dwonload.jpg);
+    background-size:1000px;
+    outline: white;
 }
 
 body {
@@ -99,6 +100,13 @@ ul.default {
     width: 500px;
     padding: 40px;
 }
+.favorito {
+size: 6px;
+width: 50px;
+}
+.D {
+    align-content: center;
+}
 
 /* -------------------- detalle-album.html -------------------- */
 
@@ -106,7 +114,23 @@ ul.default {
     width: 500px;
     padding: 40px;
 }
+.cancionesdon {
+    background-color: rgb(24, 4, 27);
+    background-size: 0 ;
+    padding: 3px;
+ 
+  }
+.don1  { 
+    border-bottom: 2px solid white;
+    justify-content: space-between;
+  
+    
 
+   }
+.dondon {
+    float: left;
+   
+}
 /* -------------------- detalle-artista.html -------------------- */
 
 .ozuna {
@@ -127,6 +151,11 @@ ul.default {
     border:oldlace 1px;
     padding: 0 20px;
     height: 20px;
+}
+.O {
+    font-size: 100px;
+    border-bottom: double;
+    
 }
 
 /* -------------------- generos.html -------------------- */
