@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="img/WhatsApp Image 2021-04-08 at 12.48.25.jpeg" alt="logo">
+        <img class="logo" src="img/logo2.png" alt="logo">
         <div class="b">
            <nav>
                <a class="c" href="index.html">HOME</a>
@@ -17,9 +17,10 @@
                <a class="c" id="d" href="generos.html">GENEROS</a>  
            </nav>
         </div>
-        <div class="buscador">
-        <input type="Text" placeholder="Buscar"> 
-        </div>
+        <form class="buscador" action="resultado.html">
+        <input type="Text" placeholder="Buscar">
+        <button>Enter</button> 
+        </form>
     </header>
 
     <section>
@@ -135,20 +136,27 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="ultimo">
         <h2>Cualquier cosa, no duden en consultar con nosotros!</h2>
-        <p>Hecho por: Benja Lanfranco, Franco Galluzo y Candelaria Tallavi</p>
-        <ul>
-            <li><img class="pie" src="img/instagram.jpg" alt="instagram">
-                <p>Instagram: @benjalanfranco, @francogalluzo y @candetallavi </p>
+        <p>Hecho por: Benjamín Lanfranco, Franco Galluzo y Candelaria Tallavi</p>
+        <ul class="foot">
+            <li><div class="abajo"><img class="pie" src="img/instagram.jpg" alt="instagram">
+                <p>Instagram: @benjalanfranco, @francogalluzo y @candetallavi</p>
+                </div>
             </li>
             <li>
-            <img class="pie" src="img/gmail.jpg" alt="gmail">
-                <p>Gmail:candetallavi8@gmail.com, francogalluzo@icloud.com, benjalanfranco@gmail.com  </p>
+                <div class="abajo">
+                    <img class="pie" src="img/gmail.jpg" alt="gmail">
+                    <div>Gmail: <a href="mailto:candetallavi8@gmail.com">candetallavi8@gmail.com</a>, <a href="mailto:francogalluzo@icloud.com">francogalluzo@icloud.com</a>, <a href="mailto:benjalanfranco@gmail.com">benjalanfranco@gmail.com</a> 
+                    </div>
+                </div>
             </li>
             <li>
-                <img class="pie" src="img/whatsapp.jpg" alt="whatsapp">
-                <p>WhatsApp; benja:+5491156459121, franco: +5491133077050, cande: +5491157506868</p>
+                <div class="abajo">
+                    <img class="pie" src="img/whatsapp.jpg" alt="whatsapp">
+                    <div>WhatsApp: Benja: <a href="tel:+5491156459121">+5491156459121</a> , Franco: <a href="tel:+5491133077050">+5491133077050</a>, Cande: <a href="tel:+5491157506868">+5491157506868</a> 
+                    </div>
+                </div>
             </li>
         </ul>
     </footer>
