@@ -143,6 +143,9 @@ ul.default {
     width: 500px;
     padding: 40px;
 }
+.daki{
+    font-size: 50px;
+}
 .favorito {
 size: 6px;
 width: 50px;
@@ -257,9 +260,6 @@ flex: wrap;
 }
 .carozo{
     list-style-type: none;
-}
-
-.carrusel{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -479,6 +479,11 @@ padding-bottom: 15px;
 .ozuna{
     width: 75vw;
 }
+.top{
+    padding: 20px;
+    margin-right: 0px;
+}
+
 
 /* detalle-cancion.html */
 .dakiti{
@@ -490,6 +495,8 @@ padding-bottom: 15px;
 }
 .daki{
     text-align: center;
+    font-size: 75px;
+    margin: 25px 0px;
 }
 /*genero.html */
 .imagenes{
