@@ -11,7 +11,7 @@
     <header>
         <img class="logo" src="img/logo2.png" alt="logo">
         <div class="b">
-           <nav>
+           <nav class="n">
                <a class="c" href="index.html">HOME</a>
                <a class="c" href="playlist.html">PLAYLIST</a>
                <a class="c" id="d" href="generos.html">GENEROS</a>  
@@ -19,32 +19,51 @@
         </div>
         <form class="buscador" action="resultado.html">
         <input type="Text" placeholder="Buscar">
-        <button>Enter</button> 
+        <button class="boton">Enter</button> 
         </form>
     </header>
 <section>
        <h1 class="tit"> Tu playlist de favoritas</h1>
        <article>
            <ul class= favs  type= circle >
-            <li> <a href="https://www.youtube.com/watch?v=TmKh7lAwnBI"><img class= imgs src="img/dakitiplaylist.jpg" alt=""></a>
-                Dakiti
-                <img class="icono" src="img/favorito.png" alt=""> 
-        </li>
-            <li> <a href="https://www.youtube.com/watch?v=iJT3xtMmzGE"><img class= imgs src="img/dileael.jpg" alt=""></a>
-                Dile a el
-                <img class="icono" src="img/favorito.png" alt="">
+            <li class="otra"> 
+                <p class="tul"> Dakiti </p>
+                <a href="https://www.youtube.com/watch?v=TmKh7lAwnBI"><img class= imgs src="img/dakitiplaylist.jpg" alt=""></a>
+                
             </li>
-            <li> <a href="https://www.youtube.com/watch?v=SrloZYkzyl8"><img class= imgs src="img/aura.jpg" alt=""> </a>
-                Aura   <img class="icono" src="img/favorito.png" alt="">
+            <li class="otra">
+               <p class ="tul"> Dile a el </p>               
+                <a href="https://www.youtube.com/watch?v=iJT3xtMmzGE"><img class= imgs src="img/dileael.jpg" alt=""></a>
+                
             </li>
-            <li> <a href="https://www.youtube.com/watch?v=Q_gIYp078so"><img class= imgs src="img/lacuriosidad.jpg" alt=""></a>
-                La curiosidad    <img class="icono" src="img/favorito.png" alt="">
+            <li class="otra"> 
+                <p class="tul"> Aura</p>  
+                <a href="https://www.youtube.com/watch?v=SrloZYkzyl8"><img class= imgs src="img/aura.jpg" alt=""> </a>
+                
+            </li>
+            <li class="otra">
+                <p class="tul">  La curiosidad  </p>       
+                <a href="https://www.youtube.com/watch?v=Q_gIYp078so"><img class= imgs src="img/curiosidad.jpg" alt=""></a>
+                
              </li>
-            <li>
-                 <a href="https://www.youtube.com/watch?v=FJi3EgUMb4k"><img class= imgs src="img/rene.jpg" alt=""></a>
-                    Antes que el mundo se acabe
-                    <img class="icono" src="img/favorito.png" alt="">
+            <li class="otra">
+                <p class="tul">  Antes que el mundo se acabe  </p>  
+                    
+                 <a href="https://www.youtube.com/watch?v=FJi3EgUMb4k"><img class= imgs src="img/resi.jpg" alt=""></a>
+                    
                   </li>
+            <li class="otra">
+                <p class="tul"> Verano en Mallorca  </p>  
+                 <a href="https://www.youtube.com/watch?v=4lx14EMcWBM"><img class= imgs src="img/eluno.jpg" alt=""></a>
+                    
+                 </li>     
+                 
+            <li class="otra">
+                
+                <a href="index.html"> <img class= imgs id="sola" src="img/mas.png" alt=""></a>
+                
+                 </li>
+                
            </ul>
 
 
@@ -53,34 +72,34 @@
        </article>
 
 </section>
-    <footer class="ultimo">
-        <h2>Cualquier cosa, no duden en consultar con nosotros!</h2>
-        <p>Hecho por: Benjamín Lanfranco, Franco Galluzo y Candelaria Tallavi</p>
-        <ul class="foot">
-            <li>
-                <div class="abajo">
-                    <a href="https://www.instagram.com/?hl=es-la">
-                        <img class="pie" src="img/instagram.jpg" alt="instagram">
-                    </a>
-                <p>Instagram: @benjalanfranco, @francogalluzo y @candetallavi</p>
+<footer class="ultimo" id="fondo">
+    <h2>Cualquier cosa, no duden en consultar con nosotros!</h2>
+    <p>Hecho por: Benjamín Lanfranco, Franco Galluzo y Candelaria Tallavi</p>
+    <ul class="foot">
+        <li>
+            <div class="abajo">
+                <a href="https://www.instagram.com/?hl=es-la">
+                    <img class="pie" src="img/instagram.jpg" alt="instagram">
+                </a>
+            <p>Instagram: @benjalanfranco, @francogalluzo y @candetallavi</p>
+            </div>
+        </li>
+        <li>
+            <div class="abajo">
+                <div><img class="pie" src="img/gmail.jpg" alt="gmail"></div>
+                <div>Gmail: <a href="mailto:candetallavi8@gmail.com">candetallavi8@gmail.com</a>, <a href="mailto:francogalluzo@icloud.com">francogalluzo@icloud.com</a>, <a href="mailto:benjalanfranco@gmail.com">benjalanfranco@gmail.com</a> 
                 </div>
-            </li>
-            <li>
-                <div class="abajo">
-                    <img class="pie" src="img/gmail.jpg" alt="gmail">
-                    <div>Gmail: <a href="mailto:candetallavi8@gmail.com">candetallavi8@gmail.com</a>, <a href="mailto:francogalluzo@icloud.com">francogalluzo@icloud.com</a>, <a href="mailto:benjalanfranco@gmail.com">benjalanfranco@gmail.com</a> 
-                    </div>
+            </div>
+        </li>
+        <li>
+            <div class="abajo">
+                <div><img class="pie" src="img/whatsapp.jpg" alt="whatsapp"></div>
+                <div>WhatsApp: Benja: <a href="tel:+5491156459121">+5491156459121</a> , Franco: <a href="tel:+5491133077050">+5491133077050</a>, Cande: <a href="tel:+5491157506868">+5491157506868</a> 
                 </div>
-            </li>
-            <li>
-                <div class="abajo">
-                    <img class="pie" src="img/whatsapp.jpg" alt="whatsapp">
-                    <div>WhatsApp: Benja: <a href="tel:+5491156459121">+5491156459121</a> , Franco: <a href="tel:+5491133077050">+5491133077050</a>, Cande: <a href="tel:+5491157506868">+5491157506868</a> 
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </footer>
+            </div>
+        </li>
+    </ul>
+</footer>
 
 </body>
 </html>
