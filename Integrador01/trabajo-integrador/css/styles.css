@@ -73,6 +73,7 @@ section {
     background-image: url(https://damedembow.com/wp-content/uploads/2019/10/imagen_blog_fondo-1024x611.jpg);
     background-attachment: fixed;
     color: snow;
+    background-size: cover;
 }
 
 .titulo{
