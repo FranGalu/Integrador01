@@ -1,10 +1,19 @@
+  
+  body{
+    background-color: black;
+  }
+  .blanco{
+      color: white;
+      text-decoration: none;
+  }
+  
   /* -------------------- Encabezado de todas las paginas -------------------- */
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-image: url(https://images.template.net/wp-content/uploads/2016/04/26062247/Shades-in-Purple-Background-Dwonload.jpg);
-    background-size:1000px;
+    background-size: 900px;
     outline: white;
     
 
@@ -204,35 +213,59 @@ flex-direction: row ;
     font-size: 100px;
     border-bottom: double;
     height: 105px;
+    margin: 10px;
+
     
 }
 .top {
     font-size: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     height:100px;
+    margin: 10px;
+
+    
 
 }
+
+.pot{
+    font-size: 37px;
+    text-align: center;
+
+}
+
 .ozu {
 display: flex;
 flex: wrap;
-
-
 }
-/* -------------------- generos.html -------------------- */
 
-.generos{
+.re{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    background-color: black;
+    padding: 0 20px 12px 0;
+    
+    
 }
 
-.imagenes {
-   width: 275px;
-   height: 300px;
-   border-radius: 30px;
+.sin{
+    list-style-type: none;
 
+}
+
+/* -------------------- detalle.genero.html -------------------- */
+
+.cualca{
+    font-size: 70px; 
+     text-decoration: underline 3px;
+     margin: 20px;
+}
+.carozo{
+    list-style-type: none;
+}
+
+.carrusel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .t{
@@ -246,7 +279,47 @@ flex: wrap;
     border-radius: 30px;
 }
 
-/* -------------------- Responsive -------------------- */
+.coca{
+    font-size: 25px;
+    text-align: center;
+}
+
+/* -------------------- generos.html -------------------- */
+.galu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sacar{
+    list-style-type: none;
+    padding-bottom: 50px;
+}
+
+.agrandar{
+    font-size: 25px;
+}
+
+.generos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gen{
+    height: 100px;
+    font-size: 70px; 
+     text-decoration: underline 3px;
+     margin: 20px;
+}
+.imagenes {
+   width: 275px;
+   height: 300px;
+   border-radius: 30px;
+
+}
+
 
 
 
@@ -255,17 +328,193 @@ flex: wrap;
  
 
 .imgs {
-    width:75px;
-    height: 50px;
+    width: 200px;
+    justify-content: fit-content;
     border-radius: 10px;
     padding-bottom: 5px;
+
 }
 .tit {
     font-size: 50px;
     height: 100px;
+    margin: 10px 0px 0px 0px;
 }
 .icono {
     width:75px;
     height: 50px;
     border-radius: 10px;
+}
+
+.favs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 500px;
+    list-style-type: none;
+    padding-bottom: 75px;
+}
+
+.otra {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0px 20px;
+    
+}
+
+#sola {
+    width: 150px;
+    padding-top: 50px;
+}
+.tul {
+    text-align: center;
+    font-size: 18px;
+}
+/* -------------------- Busqueda -------------------- */
+
+.resul{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+}
+.grande{
+    font-size: 40px;
+    text-align: center;
+}
+.mini{
+    background-color:rgb(255, 255, 255);
+    color: black;
+}
+
+/* -------------------- Responsive -------------------- */
+
+@media (max-width: 420px) {
+    header{
+        flex-direction: column;
+    }
+    .logo{
+        align-self: center;
+    }
+    .b{
+        font-size: 25px;
+        align-self: center;
+    }
+    .c{
+        padding: 0px 4px;
+        
+    }
+    .buscador{
+        padding: 0px;
+        margin: 0px 4px 6px 0px;
+        align-self: center;
+
+    }
+    .foot{
+        padding-left: 4px;
+        flex-direction: column;
+    }
+    .abajo{
+        justify-content: center;
+    }
+    .pie{
+        margin: 0px;
+        align-self: center;
+        
+
+    }
+  
+    /* index.html */
+
+    .art{
+        align-self: center;
+        
+    }
+    section{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .lista{
+        justify-content: center;
+    }
+
+    #w{
+        border-bottom: dotted white 8px;
+    }
+
+    /* detalle-album.html */
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.don2{
+    width: 90vw;
+    
+}
+.dondon{
+    width: 90vw;
+    margin: 0px;
+}
+.don1{
+    text-align: center;
+}
+.don{
+    width: 75vw;
+}
+
+.tld{
+    text-align: center;
+}
+
+
+
+/* detalle-artista.html */
+.ozu{
+flex-direction: column;
+padding-bottom: 15px;
+}
+.ozuna{
+    width: 75vw;
+}
+
+/* detalle-cancion.html */
+.dakiti{
+    width: 75vw;
+}
+.video{
+    width: 75vw;
+    margin: 0px 35px;
+}
+.daki{
+    text-align: center;
+}
+/*genero.html */
+.imagenes{
+    width: 75vw;
+}
+/* detalle-genero.html */
+
+.h {
+    width: 75vw;
+}
+/* playlist.html */
+.favs{
+height: 1800px;
+}
+.tit{
+    text-align: center;
+    padding-bottom: 25px;
+}
+.otra{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
 }
