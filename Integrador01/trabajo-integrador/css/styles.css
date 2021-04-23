@@ -1,6 +1,8 @@
   
   body{
     background-color: black;
+    margin: 0px;
+    border: solid 7px black; 
   }
   .blanco{
       color: white;
@@ -8,6 +10,7 @@
   }
   
   /* -------------------- Encabezado de todas las paginas -------------------- */
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -15,13 +18,6 @@ header {
     background-image: url(https://images.template.net/wp-content/uploads/2016/04/26062247/Shades-in-Purple-Background-Dwonload.jpg);
     background-size: 900px;
     outline: white;
-    
-
-}
-
-body {
-    margin: 0px;
-    border: solid 7px black; 
 }
 
 .logo {
@@ -41,9 +37,23 @@ body {
     color: black;
 }
 
-
 #d {
     border-right: 0px;
+}
+
+.buscador{
+    margin: 5px;
+    padding: 35px;
+    height: 20px;
+
+}
+
+.buscador input{
+    border-radius: 30px;
+    outline: none;
+    border:oldlace 1px;
+    padding: 0 20px;
+    height: 20px;
 }
 
 /* -------------------- Footer de todas las paginas -------------------- */
@@ -164,16 +174,16 @@ width: 50px;
 
 
    }
-   .datos {
+.datos {
        font-family: sans-serif;
        font-size: 20px;
        text-align: center;
    }
-   .don2 {
+.don2 {
        width: 600px;
    }
 
-   .don3 {
+.don3 {
 display: flex;
 flex-wrap: wrap;
 flex-direction: row ;
@@ -195,20 +205,7 @@ flex-direction: row ;
     padding: 40px;
 }
 
-.buscador{
-    margin: 5px;
-    padding: 35px;
-    height: 20px;
 
-}
-
-.buscador input{
-    border-radius: 30px;
-    outline: none;
-    border:oldlace 1px;
-    padding: 0 20px;
-    height: 20px;
-}
 .O {
     font-size: 100px;
     border-bottom: double;
@@ -390,34 +387,36 @@ flex: wrap;
 /* -------------------- Responsive -------------------- */
 
 @media (max-width: 420px) {
-    header{
+    
+    
+header{
         flex-direction: column;
     }
-    .logo{
+.logo{
         align-self: center;
     }
-    .b{
+.b{
         font-size: 25px;
         align-self: center;
     }
-    .c{
+.c{
         padding: 0px 4px;
         
     }
-    .buscador{
+.buscador{
         padding: 0px;
         margin: 0px 4px 6px 0px;
         align-self: center;
 
     }
-    .foot{
+.foot{
         padding-left: 4px;
         flex-direction: column;
     }
-    .abajo{
-        justify-content: center;
+.abajo{
+       justify-content: center;
     }
-    .pie{
+.pie{
         margin: 0px;
         align-self: center;
         
@@ -426,22 +425,22 @@ flex: wrap;
   
     /* index.html */
 
-    .art{
+.art{
         align-self: center;
         
     }
-    section{
+section{
         flex-direction: column;
         justify-content: center;
     }
-    .titulo{
+.titulo{
         text-align: center;
     }
-    .lista{
+.lista{
         justify-content: center;
     }
 
-    #w{
+#w{
         border-bottom: dotted white 8px;
     }
 
