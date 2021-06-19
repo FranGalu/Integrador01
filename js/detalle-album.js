@@ -28,11 +28,11 @@ fetch(url)
                     <h2> <a class="blanco"href="detalle-genero.html"> Género: ${info[i].genres.data.name} </a></h2>
                     <h4>Publicación: ${info[i].release_date}</h4> 
                 </div> 
-            </div>                    `
+            </div>          `          
 
-                    for(let i=0; i<tracks.name; i++){
+          for(let i=0; i<tracks.name; i++){
                    lista.innerHTML += `
-                    <div class="don3">
+                     <div class="don3">
                         <div class="dondon">
                             
         
@@ -51,7 +51,7 @@ fetch(url)
                     </div>      `
              
 
-            )}
+                }  } }   )
 
     //Nos quedamos solo con el array de datos
 
