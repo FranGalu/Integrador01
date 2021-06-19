@@ -21,7 +21,7 @@ fetch(url)
         let image = document.querySelector('.don');
         let title = document.querySelector('.tld');
         let artist = document.querySelector('.artista');
-        let date = document.querySelector('.date')
+        let date = document.querySelector('.date');
 
         let tracks = data.tracks.data;
         let lista = document.querySelector('.cancionesdon');
