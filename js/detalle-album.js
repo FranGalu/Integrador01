@@ -38,7 +38,11 @@ fetch(url)
                         <div class="dondon">
                             
         
+<<<<<<< HEAD
                             <li class="don1">${tracks[i].title}</li>
+=======
+                            <li class="don1">${info[i].tracks.data}</li>
+>>>>>>> e6692270b65f20cc37ae76e4a99440de77891335
         
                           
                         </div>  
