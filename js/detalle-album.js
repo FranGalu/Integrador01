@@ -36,7 +36,7 @@ fetch(url)
                         <div class="dondon">
                             
         
-                            <li class="don1">${info[i].tracks}</li>
+                            <li class="don1">${info[i].tracks.data}</li>
         
                           
                         </div>  
