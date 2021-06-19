@@ -292,17 +292,15 @@ flex: wrap;
 .sacar{
     list-style-type: none;
     padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .agrandar{
     font-size: 25px;
 }
 
-.generos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .gen{
     height: 100px;
