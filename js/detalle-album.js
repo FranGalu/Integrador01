@@ -20,13 +20,13 @@ fetch(url)
     
         let image = document.querySelector('.don');
         let title = document.querySelector('.tld');
-        let artist = document.querySelector('.artista');
+        let artist = document.querySelector('.Artista');
         let date = document.querySelector('.date');
 
         let tracks = data.tracks.data;
         let lista = document.querySelector('.cancionesdon');
 
-        image.src = data.cover_medium;
+        image.src = data.cover_xl;
         title.innerText = data.title;
         artist.innerText = data.artist.name;
         date.innerText = data.release_date;
@@ -38,21 +38,12 @@ fetch(url)
                         <div class="dondon">
                             
         
-<<<<<<< HEAD
                             <li class="don1">${tracks[i].title}</li>
-=======
-                            <li class="don1">${info[i].tracks.data}</li>
->>>>>>> e6692270b65f20cc37ae76e4a99440de77891335
         
                           
                         </div>  
-                        <div class="dondon">
-                     
-                            <li class="don1">${tracks[i].title}</li>
-        
-                        </div>
-              
-                        </div>      `
+                        
+                    </div>      `
             
     
          }
