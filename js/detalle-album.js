@@ -16,15 +16,47 @@ fetch(url)
     .then( function(data){
         console.log(data);
 
-    //Nos quedamos solo con el array de datos
 
-        //let image = document.querySelector('img');
-      //  let title = document.querySelector('.tld');
-       // let artista = document.querySelector('.artista');
-        //let año = document.querySelector('.año')
+    
+        let image = document.querySelector('.don');
+        let title = document.querySelector('.tld');
+        let artist = document.querySelector('.Artista');
+        let date = document.querySelector('.date');
+
+        let tracks = data.tracks.data;
+        let lista = document.querySelector('.cancionesdon');
+
+        image.src = data.cover_xl;
+        title.innerText = data.title;
+        artist.innerText = data.artist.name;
+        date.innerText = 'release date' + data.release_date;
+   
+        for(let i=0; i<tracks.length; i++){
+        
+                   lista.innerHTML += `
+                    <div class="don3">
+                        <div class="dondon">
+                            
+        
+                            <li class="don1">${tracks[i].title}</li>
+        
+                          
+                        </div>  
+                        
+                    </div>      `
+            
+    
+         }
+         
+
     })
-    // image.src = 
-     //title.innerText = 
-      //  artista.innerText = 
-      //  año.innerText = 
-    .catch( e => { console.log(e) }) 
+    .catch(function (error){
+        console.log('El error fue: ' + error);})
+             
+
+
+    
+
+       
+ 
+        

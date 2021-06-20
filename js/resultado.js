@@ -8,8 +8,8 @@
 
 
 let queryString = location.search
-let queryStringToObject = new URLSearchParams(queryString);
-let busqueda = queryStringToObject.get('buscar');
+let queryStringToObject = new URLSearchParams(queryString)
+let busqueda = queryStringToObject.get('buscar')
 
 let buscado = document.querySelector('.buscado');
 buscado.innerText = busqueda;

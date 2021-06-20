@@ -104,6 +104,6 @@ fetch (url3)
       })
 
 
-   //DETALLE DE ALBUM
+   
 
        
