@@ -204,8 +204,8 @@ flex-direction: row ;
 /* -------------------- detalle-artista.html -------------------- */
 
 .ozuna {
-    width: 500px;
     padding: 40px;
+    height: fit-content;
 }
 
 
@@ -238,10 +238,7 @@ flex: wrap;
 }
 
 .re{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    padding: 0 20px 12px 0;
+    
     
     
 }
@@ -281,6 +278,10 @@ flex: wrap;
     text-align: center;
 }
 
+.image{
+    padding: 40px;
+    height: fit-content;
+}
 /* -------------------- generos.html -------------------- */
 .galu{
     display: flex;
@@ -292,17 +293,15 @@ flex: wrap;
 .sacar{
     list-style-type: none;
     padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .agrandar{
     font-size: 25px;
 }
 
-.generos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .gen{
     height: 100px;
@@ -373,15 +372,14 @@ flex: wrap;
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 500px;
+    
 }
 .grande{
     font-size: 40px;
     text-align: center;
 }
 .mini{
-    background-color:rgb(255, 255, 255);
-    color: black;
+    
 }
 
 /* -------------------- Responsive -------------------- */
