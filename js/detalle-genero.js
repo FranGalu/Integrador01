@@ -6,10 +6,13 @@ let queryStringToObject = new URLSearchParams(queryString);
 let id = queryStringToObject.get('id');
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
-let genre = `https://api.deezer.com/genre/${id}`;
-let url = proxy + genre;
+let genre = `https://api.deezer.com/genre/${id}/artists`;
+let url1 = proxy + genre;
 
-fetch(url)
+let genre2 = `https://api.deezer.com/genre/${id}`;
+let url2 = proxy + genre2;
+
+fetch(url2)
       .then(function(response){
           return response.json(); 
       })
@@ -19,9 +22,40 @@ fetch(url)
           let nombre = document.querySelector('.cualca')
           let imagen = document.querySelector('.image')
           nombre.innerText = data.name
-          imagen.src = data.picture_big
+          imagen.src = data.picture_medium
         })
       
           .catch(function (error){
             console.log('El error fue: ' + error);
          })
+
+
+
+fetch(url1)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        let generosContainer = document.querySelector('.sacar');
+        let generos = ''
+        
+
+       
+        
+      for(let i=0; i<data.data.length; i++){
+            generos += `
+                         <li class="generos"> <p class="agrandar"> ${data.data[i].name}</p> 
+                            <a href="detalle-genero.html?id=${data.data[i].id}">
+                            <img class="imagenes" src="${data.data[i].picture_medium}" alt="">
+                            </a>
+                        </li>`
+        }
+
+        generosContainer.innerHTML += generos
+    })
+
+
+    .catch(function(error){
+        console.log(error);
+    })
