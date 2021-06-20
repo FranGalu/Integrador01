@@ -40,9 +40,26 @@ fetch (url)
          .catch(function (error){
              console.log('El error fue: ' + error);})
 
-            // let favoritos = [];
-            // let fav = document.querySelector('.fav');
-            // console.log(fav);
+             let favoritos = [];
+            let fav = document.querySelector('.presione');
+            console.log(presione);
+
+            presione.addEventListener("click", function(e){
+              console.log(e);
+              e.preventDefault();
+             
+              favoritos.push(id);
+              console.log(favoritos);
+
+              let presioneParaStorage = JSON.stringify(favoritos);
+
+              localStorage.setItem('favoritos', presioneParaStorage);
+              console.log(localStorage);
+
+
+
+
+            })
 
 
 
