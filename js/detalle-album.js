@@ -29,7 +29,7 @@ fetch(url)
         image.src = data.cover_xl;
         title.innerText = data.title;
         artist.innerText = data.artist.name;
-        date.innerText = data.release_date;
+        date.innerText = 'release date' + data.release_date;
    
         for(let i=0; i<tracks.length; i++){
         
