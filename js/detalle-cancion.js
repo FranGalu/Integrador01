@@ -22,48 +22,44 @@ fetch (url)
               let tapa = document.querySelector('.dakiti');
               let disco = document.querySelector('.album'); 
               
-              let canciones = data.canciones.data;
-              let lista = document.querySelector('.detalleCancion');
-
-            
+        
+              
               title.innerText = data.title;
               artist.innerText = data.artist.name;
               tapa.src = data.album.cover_big;
               disco.innerText = data.album.title;  
-
-              canciones.innerHTML += `  <img class="dakiti" src="img/el-ultimo-tour.del-mundo.png" alt="Dakiti">
-              <div>
-          
-       <h1 class="daki">"Dakiti"</h1>  
-              
-                                       <div class="D"> 
-                   
-                                           <a href="playlist.html" class="favorito"> 
-                                           <img  class=favorito src="./img/favorito.png" alt=""> </a>
-                                            <p class="presione">Presione aquí para agregar</p> 
-                                      </div>
-           
-                  <h2> <a class="artista" href="detalle-artista.html"> Artista: Bad Bunny </a></h2> 
-                  <h2> <a class="album" href="detalle-album.html"> Album: "El último tour del mundo" </a></h2>   
-                  <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/TmKh7lAwnBI" 
-                          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                          allowfullscreen>
-                  </iframe>
-              
-              </div> 
-       `
-        
               
                
-              
+        artist.style.color = "white";
+        artist.style.fontSize = "40px"; 
+           
+        disco.style.color = "white";
+        disco.style.fontSize = "40px";
             })
           
          .catch(function (error){
              console.log('El error fue: ' + error);})
 
-            // let favoritos = [];
-            // let fav = document.querySelector('.fav');
-            // console.log(fav);
+             let favoritos = [];
+            let fav = document.querySelector('.presione');
+            console.log(presione);
+
+            presione.addEventListener("click", function(e){
+              console.log(e);
+              e.preventDefault();
+             
+              favoritos.push(id);
+              console.log(favoritos);
+
+              let presioneParaStorage = JSON.stringify(favoritos);
+
+              localStorage.setItem('favoritos', presioneParaStorage);
+              console.log(localStorage);
+
+
+
+
+            })
 
 
 
