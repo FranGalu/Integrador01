@@ -101,9 +101,39 @@ fetch (url3)
 
     .catch(function (error){
   console.log('El error fue: ' + error);
+
       })
-
-
-   
-
+    //Formulario
        
+    let formulario = document.querySelector('.buscador');
+    let buscador = document.querySelector('[name="buscar"]');
+    let closeIcon = document.querySelector('.closeIcon');
+    let alert = document.querySelector('.alerta');
+
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        if(buscador.value == ""){
+          alert.innerText = 'el campo esta vacio master';
+          closeIcon.style.display = 'inline'            
+        
+
+
+            closeIcon.style.display = 'inline'            
+        } else if( buscador.value.length < 3){
+
+          alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
+            
+            closeIcon.style.display = 'inline'
+        } else {
+            this.submit();
+        }
+    })
+
+   //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
+   buscador.addEventListener('input', function(){
+    alerta.innerText = '';
+    closeIcon.style.display = 'none';
+})
+      
