@@ -129,7 +129,7 @@ fetch (url3)
     })
 
    //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
-   campoBuscar.addEventListener('input', function(){
+   buscador.addEventListener('input', function(){
     alert.innerText = '';
     closeIcon.style.display = 'none';
 })
