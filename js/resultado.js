@@ -18,30 +18,30 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 let search = `https://api.deezer.com/search?q=${busqueda}`
 let url = proxy + search
 
-fetch(url)
-.then(function(response){
-    return response.json(); 
-})
-.then(function(data){
-    console.log(data);
+                  fetch(url)
+                  .then(function(response){
+                      return response.json(); 
+                  })
+                  .then(function(data){
+                      console.log(data);
 
-    let lista = document.querySelector('.mini');
-    let devuelve = '';
+                      let lista = document.querySelector('.mini');
+                      let devuelve = '';
 
-    for(let i=0; i<data.data.length; i++){
-           
-            devuelve += `<li>
-                            <p>${data.data[i].title}</p>                                                    
-                         </li>` 
+                      for(let i=0; i<data.data.length; i++){
+                            
+                              devuelve += `<li>
+                                              <p>${data.data[i].title}</p>                                                                          
+                                          </li>` 
 
-                         
-    }
+                                          
+                      }
 
-    lista.innerHTML += devuelve
+                      lista.innerHTML += devuelve
 
 
-  })
+                    })
 
-    .catch(function (error){
-      console.log('El error fue: ' + error);
-   })
+                      .catch(function (error){
+                        console.log('El error fue: ' + error);
+                    })

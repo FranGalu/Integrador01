@@ -237,11 +237,6 @@ display: flex;
 flex: wrap;
 }
 
-.re{
-    
-    
-    
-}
 
 .sin{
     list-style-type: none;
@@ -378,9 +373,7 @@ flex: wrap;
     font-size: 40px;
     text-align: center;
 }
-.mini{
-    
-}
+
 
 /* -------------------- Responsive -------------------- */
 

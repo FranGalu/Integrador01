@@ -18,18 +18,10 @@ fetch(url)
 
           let nombre = document.querySelector('.cualca')
           let imagen = document.querySelector('.image')
-<<<<<<< HEAD
-          
-=======
->>>>>>> cfa72c5d17311888b11d2cffa13506e43ace94b0
           nombre.innerText = data.name
           imagen.src = data.picture_big
         })
       
           .catch(function (error){
             console.log('El error fue: ' + error);
-<<<<<<< HEAD
          })
-=======
-         })
->>>>>>> cfa72c5d17311888b11d2cffa13506e43ace94b0
