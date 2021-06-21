@@ -138,6 +138,11 @@ ul.default {
     
 }
 /* -------------------- detalle-cancion.html -------------------- */
+.detalleCancion {
+font-size: 30px;
+color: white; 
+text-align: center;
+}
 
 .dakiti {
     width: 500px;
@@ -149,6 +154,7 @@ ul.default {
 .favorito {
 size: 6px;
 width: 50px;
+display: flex;
 }
 .D {
     align-content: center;
