@@ -21,13 +21,14 @@ fetch (url)
               let artist = document.querySelector('.artista');
               let tapa = document.querySelector('.dakiti');
               let disco = document.querySelector('.album'); 
-              
+              let player = document.querySelector('.player');
         
               
               title.innerText = data.title;
               artist.innerText = data.artist.name;
               tapa.src = data.album.cover_big;
               disco.innerText = data.album.title;  
+              player.src = data.link; 
               
                
         artist.style.color = "white";
@@ -40,25 +41,43 @@ fetch (url)
          .catch(function (error){
              console.log('El error fue: ' + error);})
 
+             //AGREGAR la lista de favoritos
+             //necesitamos un array
              let favoritos = [];
-            let fav = document.querySelector('.presione');
+            //Recuperar datos del Storage
+            let recuperoStorage = localStorage.getItem('favoritos');
+          //AGREGAR info del local Storage en el array
+          if(recuperoStorage != null){
+            favoritos = JSON.parse(recuperoStorage);
+          }
+           //Quitar favoritos
+           if(favoritos.includes(id)){
+             document.querySelector('.presione').innerText = "Quitar de favoritos";
+           }
+
+
+            let presione = document.querySelector('.presione');
             console.log(presione);
 
             presione.addEventListener("click", function(e){
-              console.log(e);
               e.preventDefault();
-             
+
+              if(favoritos.includes(id)){
+                  let idASacar = favoritos.indexOf(id);
+                  favoritos.splice(idASacar,1);
+                  document.querySelector('.presione').innerText = "Agregar a favoritos";
+              } else{
+
               favoritos.push(id);
               console.log(favoritos);
-
+              document.querySelector('.presione').innerText = "Quitar de favoritos";
+            }
+             //necesitamos guardar la informacion en el storage
               let presioneParaStorage = JSON.stringify(favoritos);
 
               localStorage.setItem('favoritos', presioneParaStorage);
               console.log(localStorage);
-
-
-
-
+             
             })
 
 
