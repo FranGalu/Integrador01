@@ -336,22 +336,17 @@ flex: wrap;
     border-radius: 10px;
 }
 
-.favs {
+.otra {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     height: 500px;
     list-style-type: none;
     padding-bottom: 75px;
+        
 }
 
-.otra {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0px 20px;
-    
-}
+
 
 #sola {
     width: 150px;
