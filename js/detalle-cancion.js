@@ -28,7 +28,7 @@ fetch (url)
               artist.innerText = data.artist.name;
               tapa.src = data.album.cover_big;
               disco.innerText = data.album.title;  
-              player.src = data.link; 
+              player.src = `https://www.deezer.com/track/${id}`; 
               
                
         artist.style.color = "white";
