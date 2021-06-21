@@ -9,15 +9,14 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 let album = `https://api.deezer.com/album/${id}`;
 let url = proxy + album;
 
-fetch(url)
+   fetch(url)
     .then( function(response){
         return response.json();
     })
+
     .then( function(data){
         console.log(data);
 
-
-    
         let image = document.querySelector('.don');
         let title = document.querySelector('.tld');
         let artist = document.querySelector('.Artista');

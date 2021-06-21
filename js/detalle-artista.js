@@ -11,10 +11,10 @@ let id = queryStringToObject.get('id');
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let artista = `https://api.deezer.com/artist/${id}`;
 let tracklist = `https://api.deezer.com/artist/${id}/top?limit=50`
-let url = proxy + artista
-let url2 = proxy + tracklist
+let url = proxy + artista;
+let url2 = proxy + tracklist;
 
-fetch(url)
+   fetch(url)
       .then( function(response){
           return response.json(); 
       })
@@ -23,8 +23,8 @@ fetch(url)
 
          let nombre = document.querySelector('.O');
          let imagen = document.querySelector('.ozuna');
-         let trackContainer = document.querySelector('.re')
-         let track = ''
+         let trackContainer = document.querySelector('.re');
+         let track = '';
          
             fetch(url2)
                 .then( function(response){
@@ -33,14 +33,14 @@ fetch(url)
                 .then( function(data){
                     console.log(data);
                         for (let i=0; i<data.data.length; i++){
-                          track += `<ol class="top"> 
-                                        <a class="blanco" href="detalle-cancion.html?id=${data.data[i].id}">
+                          track += `
+                                        <a class="blanco" href="detalle-cancion.html?id=${data.data[i].id}"> </a> 
                                         <li class="sin"> <p> ${data.data[i].title}</p>
-                                        </a>
-                                    </ol>`
+                                        </li> 
+                                    `
 
                         }
-                trackContainer.innerHTML += track
+                   trackContainer.innerHTML += track
                 })
                 .catch(function (error){
                     console.log('El error fue: ' + error);

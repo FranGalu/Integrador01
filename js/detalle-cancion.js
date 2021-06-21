@@ -10,7 +10,7 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 let dcancion = `https://api.deezer.com/track/${id}`;
 let url= proxy + dcancion; 
 
-fetch (url)
+         fetch (url)
             .then(function(response){
                 return response.json();
             })
@@ -30,7 +30,8 @@ fetch (url)
               disco.innerText = data.album.title;  
               player.src = `https://www.deezer.com/track/${id}`; 
               
-               
+        title.style.fontSize = "";  
+             
         artist.style.color = "white";
         artist.style.fontSize = "40px"; 
            
@@ -52,12 +53,15 @@ fetch (url)
           }
            //Quitar favoritos
            if(favoritos.includes(id)){
-             document.querySelector('.presione').innerText = "Quitar de favoritos";
+             document.querySelector('.presione').innerText = "Quitar de mi playlist de favoritos";
            }
 
 
             let presione = document.querySelector('.presione');
             console.log(presione);
+          
+            presione.style.color = "white";
+            presione.style.fontSize = "25px";
 
             presione.addEventListener("click", function(e){
               e.preventDefault();
@@ -65,13 +69,13 @@ fetch (url)
               if(favoritos.includes(id)){
                   let idASacar = favoritos.indexOf(id);
                   favoritos.splice(idASacar,1);
-                  document.querySelector('.presione').innerText = "Agregar a favoritos";
+                  document.querySelector('.presione').innerText = "Agregar a mi playlist de favoritos";
               } else{
-
-              favoritos.push(id);
-              console.log(favoritos);
-              document.querySelector('.presione').innerText = "Quitar de favoritos";
+                  favoritos.push(id);
+                  console.log(favoritos);
+                  document.querySelector('.presione').innerText = "Quitar de mi playlist de favoritos";
             }
+             
              //necesitamos guardar la informacion en el storage
               let presioneParaStorage = JSON.stringify(favoritos);
 
