@@ -515,3 +515,9 @@ height: 1800px;
 
 
 }
+
+/*Alerta personalizada*/
+
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }

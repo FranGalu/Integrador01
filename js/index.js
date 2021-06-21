@@ -101,9 +101,36 @@ fetch (url3)
 
     .catch(function (error){
   console.log('El error fue: ' + error);
+
       })
-
-
-   
-
+    //Formulario
        
+    let formulario = document.querySelector('.buscador');
+    let buscador = document.querySelector('[name="buscar"]');
+    let closeIcon = document.querySelector('.closeIcon');
+
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        if(buscador.value == ""){
+          Swal.fire('Any fool can use a computer');
+          
+        
+
+
+            //closeIcon.style.display = 'inline'            
+        } else if( buscador.value.length < 3){
+            
+            //closeIcon.style.display = 'inline'
+        } else {
+            this.submit();
+        }
+    })
+
+   //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
+   campoBuscar.addEventListener('input', function(){
+    alert.innerText = '';
+    closeIcon.style.display = 'none';
+})
+      
