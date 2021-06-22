@@ -18,21 +18,27 @@ let url= proxy + dcancion;
               console.log(data); 
 
               let title = document.querySelector('.daki');
-                          title.innerText = data.title;            
+                          title.innerText = data.title;    
+
+              let artist= document.querySelector ('.artist a');
+                          artist.href = `detalle-artista.html?id=${data.artist.id}`
+                          artist.innerText = data.artist.name;
+            
               let tapa = document.querySelector('.dakiti');
                         tapa.src = data.album.cover_big;
-              let disco = document.querySelector('.album'); 
+
+              let disco = document.querySelector('.album a'); 
                        disco.innerText = data.album.title;  
+                       disco.href = `detalle-album.html?id=${data.album.id}`;
+
               let player = document.querySelector('.player');
                          player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
-              let artist= document.querySelector ('.artist a');
-              artist.href = `detalle-artista.html?id=${data.artist.id}`
-              artist.innerText = data.artist.name;
+             
             
 
     
 
-        title.style.fontSize = "";  
+       
 
         artist.style.color = "white";
         artist.style.fontSize = "40px"; 
