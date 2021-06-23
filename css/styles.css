@@ -149,7 +149,7 @@ ul.default {
     
 }
 /* -------------------- detalle-cancion.html -------------------- */
-.detalleCancion {
+.detalleCancion2 {
 font-size: 30px;
 color: white; 
 text-align: center;
@@ -286,8 +286,8 @@ flex-direction: row ;
     font-size: 70px; 
      text-decoration: underline 3px;
      margin: 20px;
-     height: 300px;
-     vertical-align: middle;
+     height: 215px;
+     padding-top: 85px;
       
     
      

@@ -36,7 +36,8 @@ let url = proxy + album;
         let genres = data.genres.data
         
         for (let i = 0; i < genres.length; i++) {
-            genero.innerHTML += `Genero: <a class="blanco" href="detalle-genero.html?id=${genres[i].id}"> ${genres[i].name}</a> ` 
+            genero.innerHTML += `Genero: <a class="blanco" href="detalle-genero.html?id=${genres[i].id}"> ${genres[i].name}
+                                </a> ` 
             
         }
 
