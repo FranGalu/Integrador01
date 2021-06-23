@@ -18,10 +18,15 @@
            </nav>
         </div>
         <form class="buscador" action="resultado.html" method="GET"> 
-        <input class= "TextoBuscador" type="Text" name="buscar" placeholder="Buscar" value="">
+        <input class= "textoBuscador" type="Text" name="buscar" placeholder="Buscar" value="">
         <button class="boton" type="submit">Enter</button> 
+        <p class="alerta"></p>
         </form>
     </header>
+
+    <section class="load">
+        <img src="/img/loader.gif" alt="">
+    </section>
 
     <section class="todo">
         <article class="art">
@@ -87,5 +92,8 @@
         </ul>
     </footer>
 <script src="./js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/sweetalert.js"> </script>
 </body>
 </html>

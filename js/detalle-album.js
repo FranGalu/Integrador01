@@ -9,27 +9,33 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 let album = `https://api.deezer.com/album/${id}`;
 let url = proxy + album;
 
-fetch(url)
+   fetch(url)
     .then( function(response){
         return response.json();
     })
+
     .then( function(data){
         console.log(data);
 
-
-    
         let image = document.querySelector('.don');
+        image.src = data.cover_xl;
+
         let title = document.querySelector('.tld');
-        let artist = document.querySelector('.Artista');
+        title.innerText = data.title;
+
+        let artist = document.querySelector('.artista a');
+        artist.innerText = 'artista: '+ data.artist.name;
+        artist.href =  `detalle-artista.html?id=${data.artist.id}`;
+
+
         let date = document.querySelector('.date');
+        date.innerText = 'Fecha de lanzamiento: '+ data.release_date;
 
         let tracks = data.tracks.data;
         let lista = document.querySelector('.cancionesdon');
 
-        image.src = data.cover_xl;
-        title.innerText = data.title;
-        artist.innerText = 'Artista: '+data.artist.name;
-        date.innerText = 'Fecha de lanzamiento: '+ data.release_date;
+        
+    
    
         for(let i=0; i<tracks.length; i++){
         

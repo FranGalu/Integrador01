@@ -6,6 +6,7 @@ let favoritos = JSON.parse(recuperoStorage);
 let otra = document.querySelector('.otra');
  
 //Recorrer array
+
 for (let i=0; i<favoritos.length; i++){
      buscarYMostrarFavoritos(favoritos[i]);
 }
@@ -21,11 +22,19 @@ let url = proxy + playlist;
           })
           .then(function (data){
             let resultados = '';
-            let info = data.data ; 
+            
+            let otra = document.querySelector('.otra a') 
+            otra.innerText = data.name;
+            otra.href = `detalle-cancion.html?id=${data.name.id}`; 
+            
+
             otra.innerHTML += ` 
-            <p class="tul">${info.title} </p>
-            <a href=""><img class= "imgs" src="${info.picture_medium}" ></a>
+            
+        <p class="tul">${data.title} </p>
+            <a href=""><img class= "imgs" src="${data.artist.picture_medium}" ></a>
             `
+        
+
           } ) 
           .catch(function (error){
               console.log(error);

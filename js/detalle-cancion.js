@@ -10,7 +10,7 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 let dcancion = `https://api.deezer.com/track/${id}`;
 let url= proxy + dcancion; 
 
-fetch (url)
+         fetch (url)
             .then(function(response){
                 return response.json();
             })
@@ -18,19 +18,28 @@ fetch (url)
               console.log(data); 
 
               let title = document.querySelector('.daki');
-              let artist = document.querySelector('.artista');
+                          title.innerText = data.title;    
+
+              let artist= document.querySelector ('.artist a');
+                          artist.href = `detalle-artista.html?id=${data.artist.id}`
+                          artist.innerText = data.artist.name;
+            
               let tapa = document.querySelector('.dakiti');
-              let disco = document.querySelector('.album'); 
+                        tapa.src = data.album.cover_big;
+
+              let disco = document.querySelector('.album a'); 
+                       disco.innerText = data.album.title;  
+                       disco.href = `detalle-album.html?id=${data.album.id}`;
+
               let player = document.querySelector('.player');
-        
-              
-              title.innerText = data.title;
-              artist.innerText = data.artist.name;
-              tapa.src = data.album.cover_big;
-              disco.innerText = data.album.title;  
-              player.src = data.link; 
-              
-               
+                         player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
+             
+            
+
+    
+
+       
+
         artist.style.color = "white";
         artist.style.fontSize = "40px"; 
            
@@ -41,7 +50,7 @@ fetch (url)
          .catch(function (error){
              console.log('El error fue: ' + error);})
 
-             //AGREGAR la lista de favoritos
+             //AGREGAR la lista de playlist de favoritos
              //necesitamos un array
              let favoritos = [];
             //Recuperar datos del Storage
@@ -52,12 +61,15 @@ fetch (url)
           }
            //Quitar favoritos
            if(favoritos.includes(id)){
-             document.querySelector('.presione').innerText = "Quitar de favoritos";
+             document.querySelector('.presione').innerText = "Quitar de mi playlist de favoritos";
            }
 
 
             let presione = document.querySelector('.presione');
             console.log(presione);
+          
+            presione.style.color = "white";
+            presione.style.fontSize = "25px";
 
             presione.addEventListener("click", function(e){
               e.preventDefault();
@@ -65,13 +77,13 @@ fetch (url)
               if(favoritos.includes(id)){
                   let idASacar = favoritos.indexOf(id);
                   favoritos.splice(idASacar,1);
-                  document.querySelector('.presione').innerText = "Agregar a favoritos";
+                  document.querySelector('.presione').innerText = "Agregar a mi playlist de favoritos";
               } else{
-
-              favoritos.push(id);
-              console.log(favoritos);
-              document.querySelector('.presione').innerText = "Quitar de favoritos";
+                  favoritos.push(id);
+                  console.log(favoritos);
+                  document.querySelector('.presione').innerText = "Quitar de mi playlist de favoritos";
             }
+             
              //necesitamos guardar la informacion en el storage
               let presioneParaStorage = JSON.stringify(favoritos);
 
