@@ -15,24 +15,30 @@ let buscado = document.querySelector('.buscado');
 buscado.innerText = busqueda;
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
-let search = `https://api.deezer.com/search?q=${busqueda}`
-let url = proxy + search
+let searchTrack = `https://api.deezer.com/search/track?q=${busqueda}`
+let searchAlbum = `https://api.deezer.com/search/album?q=${busqueda}`
+let searchArtist = `https://api.deezer.com/search/artist?q=${busqueda}`
+let urlTrack = proxy + searchTrack
+let urlAlbum = proxy + searchAlbum
+let urlArtist = proxy + searchArtist
 
-                  fetch(url)
-                  .then(function(response){
+          fetch(urlTrack)
+              .then(function(response){
                       return response.json(); 
-                  })
-                  .then(function(data){
+              })
+              .then(function(data){
                       console.log(data);
 
                       let lista = document.querySelector('.mini');
                       let devuelve = '';
-
+                    
                       for(let i=0; i<data.data.length; i++){
                             
-                              devuelve += `<li>
+                              devuelve += `<a class="blanco" href="detalle-cancion.html?id=${data.data[i].id}">
+                                          <li>
                                               <p>${data.data[i].title}</p>                                                                          
-                                          </li>` 
+                                          </li>
+                                          </a>` 
 
                                           
                       }
@@ -40,8 +46,69 @@ let url = proxy + search
                       lista.innerHTML += devuelve
 
 
-                    })
+              })
 
-                      .catch(function (error){
+              .catch(function (error){
                         console.log('El error fue: ' + error);
-                    })
+              })
+
+
+          fetch(urlAlbum)
+              .then(function(response){
+                      return response.json(); 
+              })
+              .then(function(data){
+                      console.log(data);
+
+                      let lista = document.querySelector('.mino');
+                      let devuelve = '';
+                    
+                      for(let i=0; i<data.data.length; i++){
+                            
+                              devuelve += `<a class="blanco" href="detalle-album.html?id=${data.data[i].id}">
+                                          <li>
+                                              <p>${data.data[i].title}</p>                                                                          
+                                          </li>
+                                          </a>` 
+
+                                          
+                      }
+
+                      lista.innerHTML += devuelve
+
+
+              })
+
+              .catch(function (error){
+                        console.log('El error fue: ' + error);
+              })
+
+          fetch(urlArtist)
+              .then(function(response){
+                      return response.json(); 
+              })
+              .then(function(data){
+                      console.log(data);
+
+                      let lista = document.querySelector('.minu');
+                      let devuelve = '';
+                    
+                      for(let i=0; i<data.data.length; i++){
+                            
+                              devuelve += `<a class="blanco" href="detalle-artista.html?id=${data.data[i].id}">
+                                          <li>
+                                              <p>${data.data[i].name}</p>                                                                          
+                                          </li>
+                                          <a/>` 
+
+                                          
+                      }
+
+                      lista.innerHTML += devuelve
+
+
+              })
+
+              .catch(function (error){
+                        console.log('El error fue: ' + error);
+              })    

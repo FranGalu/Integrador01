@@ -17,18 +17,27 @@
                <a class="c" id="d" href="generos.html">GÉNEROS</a>  
            </nav>
         </div>
-        <form class="buscador" action="resultado.html">
-        <input type="Text" placeholder="Buscar">
-        <button class="boton">Enter</button> 
-        </form>
+        <form class="buscador" action="resultado.html" method="GET"> 
+            <input class= "textoBuscador" type="Text" name="buscar" placeholder="Buscar" value="">
+            <button class="boton" type="submit">Enter</button> 
+            <p class="alerta"></p>
+            </form>
     </header>
     <section class="resul">
-        <h1 class="grande">Resultados de tu búsqueda:</h1> 
+        <h1 class="grande">Resultados de tu búsqueda: </h1> 
         <h3 class="buscado"></h3>
-
         
-        <ul class="mini" type="circle">       
+    <article class="container">
+        <ul class="mini" type="circle"> 
+            <h3>Canciones</h3>      
         </ul>
+        <ul class="mino" type="circle">
+            <h3>Albumes</h3>       
+        </ul>
+        <ul class="minu" type="circle"> 
+            <h3>Artistas</h3>      
+        </ul>
+    </article>    
 
     </section>    
     <footer class="ultimo" >
