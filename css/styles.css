@@ -166,6 +166,7 @@ text-align: center;
 size: 6px;
 width: 50px;
 max-width: 50px;
+color: white;
 }
 .D {
     align-content: center;
@@ -174,8 +175,11 @@ max-width: 50px;
 }
 .presione {
     margin-left: 10px;
+    text-align: left;
 }
-
+.playl {
+    text-align: left;
+}
 /* -------------------- detalle-album.html -------------------- */
 
 .don {
