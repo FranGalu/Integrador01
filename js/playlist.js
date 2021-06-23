@@ -23,15 +23,13 @@ let url = proxy + playlist;
           .then(function (data){
             let resultados = '';
             
-            let otra = document.querySelector('.otra a') 
-            otra.innerText = data.name;
-            otra.href = `detalle-cancion.html?id=${data.name.id}`; 
-            
-
+            let otra = document.querySelector('.otra a'); 
+           
+      
             otra.innerHTML += ` 
-            
+            <a href=""></a>  
         <p class="tul">${data.title} </p>
-            <a href=""><img class= "imgs" src="${data.artist.picture_medium}" ></a>
+            <img class= "imgs" src="${data.artist.picture_medium}" >
             `
         
 
