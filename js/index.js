@@ -29,10 +29,9 @@ fetch(url1)
          //Bucle para recorrer los datos
          for(let i=0; i<info.length; i++){
              canciones += `<li class="lista"><p class="nombres">  ${info[i].title}</p>
-                            <p class= "nombres"> ${info[i].artist.name}</p>
-                               <a href="detalle-cancion.html"> <i><img class= "play" src="./img/play4.png" alt="" ></i> </a>
+                            <p class= "nombres"> ${info[i].artist.name} </p>
                              <a href="detalle-cancion.html?id=${info[i].id}"> 
-                 <img class="principal" src="${info[i].album.cover_medium}" alt="foto">
+                 <img class="principal" src="${info[i].album.cover_medium}" alt="foto" <a href="detalle-cancion.html"> <i><img class= "play" src="./img/play4.png" alt=""> </i> </a>
                              </a>
                          </li> 
                                  `

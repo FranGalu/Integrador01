@@ -23,13 +23,22 @@ let url = proxy + album;
         let title = document.querySelector('.tld');
         title.innerText = data.title;
 
+        
         let artist = document.querySelector('.artista a');
-        artist.innerText = 'artista: '+ data.artist.name;
-        artist.href =  `detalle-artista.html?id=${data.artist.id}`;
+        artist.innerText += data.artist.name;
+        artist.href =  `detalle-artista.html?id=${data.artist.id}`
 
 
         let date = document.querySelector('.date');
         date.innerText = 'Fecha de lanzamiento: '+ data.release_date;
+
+        let genero = document.querySelector('.genero')
+        let genres = data.genres.data
+        
+        for (let i = 0; i < genres.length; i++) {
+            genero.innerHTML += `Genero: <a href="detalle-genero.html?id=${genres[i].id}"> ${genres[i].name}</a> ` 
+            
+        }
 
         let tracks = data.tracks.data;
         let lista = document.querySelector('.cancionesdon');
