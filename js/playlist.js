@@ -23,6 +23,7 @@ let url = proxy + playlist;
           .then(function (data){
             let resultados = '';
             
+<<<<<<< HEAD
             let otra = document.querySelector('.otra a'); 
            
       
@@ -31,6 +32,20 @@ let url = proxy + playlist;
         <p class="tul">${data.title} </p>
             <img class= "imgs" src="${data.artist.picture_medium}" >
             `
+=======
+            let otra = document.querySelector('.otra a') 
+            otra.innerText = data.title;
+            
+            
+
+            for (let i = 0; i < favoritos.length; i++) {
+                otra.innerHTML += ` 
+            
+        <p class="tul">${data.title} </p>
+            <a href="detalle-cancion.html?id=${data.title}"><img class= "imgs" src="${data.artist.picture_medium}" ></a>`
+                
+            }
+>>>>>>> 951e65b3af2133c687d3a21263fc808cd18afe91
         
 
           } ) 

@@ -7,7 +7,7 @@
 //Que el término buscado tenga al menos 3 caracteres. Si no los tiene avisar por pantalla al usuario
 
 window.addEventListener('load',function(){
-let loader = document.querySelector('.load')
+let loader = document.querySelector('.load');
 loader.style.display = 'none';
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -29,10 +29,9 @@ fetch(url1)
          //Bucle para recorrer los datos
          for(let i=0; i<info.length; i++){
              canciones += `<li class="lista"><p class="nombres">  ${info[i].title}</p>
-                            <p class= "nombres"> ${info[i].artist.name}</p>
-                               <a href="detalle-cancion.html"> <i><img class= "play" src="./img/play4.png" alt="" ></i> </a>
+                            <p class= "nombres"> ${info[i].artist.name} </p>
                              <a href="detalle-cancion.html?id=${info[i].id}"> 
-                 <img class="principal" src="${info[i].album.cover_medium}" alt="foto">
+                 <img class="principal" src="${info[i].album.cover_medium}" alt="foto" <a href="detalle-cancion.html"> <i><img class= "play" src="./img/play4.png" alt=""> </i> </a>
                              </a>
                          </li> 
                                  `
@@ -129,7 +128,7 @@ fetch (url3)
 
           alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
             
-            closeIcon.style.display = 'inline'
+            closeIcon.style.display = 'inline';
         } else {
             this.submit();
         }
