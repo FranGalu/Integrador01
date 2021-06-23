@@ -17,9 +17,13 @@
                <a class="c" id="d" href="generos.html">GENEROS</a>  
            </nav>
         </div>
-        <form class="buscador" action="resultado.html">
-        <input type="Text" placeholder="Buscar">
-        <button class="boton">Enter</button> 
+        <form class="buscador" action="resultado.html" method="GET"> 
+            <input class= "textoBuscador" type="Text" name="buscar" placeholder="Buscar"
+            value="">
+            <i class="fas fa-exclamation-circle alIcono"></i>
+            <button class="boton" type="submit">Enter</button> 
+            <p class="alerta"></p> 
+    
         </form>
     </header>
 

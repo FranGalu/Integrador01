@@ -94,17 +94,24 @@ let urlArtist = proxy + searchArtist
                       let devuelve = '';
                     
                       for(let i=0; i<data.data.length; i++){
+
+                        if (data.data[i].length = null) {
+                        devuelve += '<p>No hay resultados para la busqueda de artistas  </p>'
+                                
+                        }
+
+                        else (
                             
                               devuelve += `<a class="blanco" href="detalle-artista.html?id=${data.data[i].id}">
                                           <li>
                                               <p>${data.data[i].name}</p>                                                                          
                                           </li>
                                           <a/>` 
-
-                                          
-                      }
-
+     
+                        )}
+                      
                       lista.innerHTML += devuelve
+        
 
 
               })
@@ -112,3 +119,18 @@ let urlArtist = proxy + searchArtist
               .catch(function (error){
                         console.log('El error fue: ' + error);
               })    
+
+              formulario.addEventListener('submit', function(e){
+                e.preventDefault();
+        
+                if(buscador.value == ""){
+                  alert.innerText = 'el campo esta vacio master';
+                  closeIcon.style.display = 'inline'            
+                } else if( buscador.value.length < 3){
+        
+                  alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
+                    closeIcon.style.display = 'inline'
+                } else {
+                    this.submit();
+                }
+            })

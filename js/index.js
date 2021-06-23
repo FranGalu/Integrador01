@@ -6,9 +6,9 @@
 //Que el campo no esté vacío. Si está vacío avisarle por pantalla al usuario.
 //Que el término buscado tenga al menos 3 caracteres. Si no los tiene avisar por pantalla al usuario
 
-window.addEventListener('load',function(){
-let loader = document.querySelector('.load');
-loader.style.display = 'none';
+window.addEventListener('load', function(){
+  let loader = document.querySelector('.load');
+  loader.style.display = 'none';
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let canciones = 'https://api.deezer.com/chart/0/tracks';

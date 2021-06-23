@@ -89,6 +89,20 @@ let url= proxy + dcancion;
               console.log(localStorage);
              
             })
+            formulario.addEventListener('submit', function(e){
+              e.preventDefault();
+      
+              if(buscador.value == ""){
+                alert.innerText = 'el campo esta vacio master';
+                closeIcon.style.display = 'inline'            
+              } else if( buscador.value.length < 3){
+      
+                alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
+                  closeIcon.style.display = 'inline'
+              } else {
+                  this.submit();
+              }
+          })
 
 
             
