@@ -20,11 +20,10 @@ fetch(url2)
       .then(function(data){
           console.log(data);
 
-          let nombre = document.querySelector('.cualca');
-          nombre.innerText = data.name;
-         
-          let imagen = document.querySelector('.image');
-          imagen.src = data.picture_medium;
+          let nombre = document.querySelector('.cualca')
+          let imagen = document.querySelector('.image')
+          nombre.innerText = data.name
+          imagen.src = data.picture_medium
         })
       
           .catch(function (error){
@@ -40,8 +39,7 @@ fetch(url1)
     .then(function(data){
         console.log(data);
         let generosContainer = document.querySelector('.sacar');
-       
-        let generos = '';
+        let generos = ''
         
 
        
@@ -49,7 +47,7 @@ fetch(url1)
       for(let i=0; i<data.data.length; i++){
             generos += `
                          <li class="generos"> <p class="agrandar"> ${data.data[i].name}</p> 
-                            <a href="detalle-genero.html?id=${data.data[i].id}">
+                            <a href="detalle-artista.html?id=${data.data[i].id}">
                             <img class="imagenes" src="${data.data[i].picture_medium}" alt="">
                             </a>
                         </li>`
