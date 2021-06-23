@@ -61,11 +61,11 @@ fetch (url2)
         for(let i=0; i<info.length; i++){
                 albumes +=`<li class="lista"><p class="nombres">${info[i].title}</p>
                                              <p class="nombres">${info[i].artist.name}</p>
-                <a href="detalle-album.html?id=${info[i].id}"> <i><img class= play  src="./img/play4.png" alt=""></i>
+                <a href="detalle-album.html?id=${info[i].id}"> 
                
                 </a>
                 <a href="detalle-album.html?id=${info[i].id}">
-                    <img class="principal" src="${info[i].cover_medium}" alt="foto">
+                    <img class="principal" src="${info[i].cover_medium}" alt="foto"><i><img class= play  src="./img/play4.png" alt=""></i>
                     </a>
                 </li>    `
                                 }
@@ -91,10 +91,10 @@ fetch (url3)
            for(let i=0; i<info.length; i++){
             artistas +=`    <li class="lista">
                           <p class="nombres">${info[i].name}</p> 
-            <a href="detalle-artista.html?id=${info[i].id}"> <i><img class= play  src="./img/play4.png" alt=""></i>
+            <a href="detalle-artista.html?id=${info[i].id}"> 
                </a>
                <a href="detalle-artista.html?id=${info[i].id}"> 
-                <img class="principal" src="${info[i].picture_medium}" alt="foto">
+                <img class="principal" src="${info[i].picture_medium}" alt="foto"><i><img class= play  src="./img/play4.png" alt=""></i>
                 </a>
                           </li> `
 
@@ -119,7 +119,7 @@ fetch (url3)
 
         if(buscador.value == ""){
           alert.innerText = 'el campo esta vacio master';
-          closeIcon.style.display = 'inline'            
+          closeIcon.style.display = 'inline';            
         
 
 
