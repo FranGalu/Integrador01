@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Reggaeton</title>
 </head>
@@ -18,14 +19,16 @@
            </nav>
         </div>
         <form class="buscador" action="resultado.html" method="GET"> 
-        <input class= "textoBuscador" type="Text" name="buscar" placeholder="Buscar" value="">
+        <input class= "textoBuscador" type="Text" name="buscar" placeholder="Buscar"
+         value="">
+         <i class="fas fa-exclamation-circle alIcono"></i>
         <button class="boton" type="submit">Enter</button> 
-        <p class="alerta"></p>
+        <p class="alerta"></p> 
         </form>
     </header>
 
     <section class="load">
-        <img src="/img/loader.gif" alt="">
+        <img src="/img/loader2.gif" alt="">
     </section>
 
     <section class="todo">
@@ -34,10 +37,7 @@
             <h2 class="titulo">Canciones</h2>
 
             <ul class="default canciones" id="w">
-               <li>
-
-               </li>
-                
+               
             </ul>
        
         </article>
@@ -45,9 +45,6 @@
             <h2 class="titulo">Álbumes</h2>
             <ul class="default album" id="w">
                 
-                <li>
-                    
-                </li> 
 
             </ul>
         </article>
@@ -55,8 +52,7 @@
 
             <h2 class="titulo">Artistas</h2>
             <ul class="default artistas">
-                <li>
-                </li>
+                
 
             </ul>
             </article>

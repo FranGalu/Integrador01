@@ -127,7 +127,7 @@ fetch (url3)
        
     let formulario = document.querySelector('.buscador');
     let buscador = document.querySelector('[name="buscar"]');
-    let closeIcon = document.querySelector('.closeIcon');
+    let closeIcon = document.querySelector('.alIcono');
     let alert = document.querySelector('.alerta');
 
 
@@ -136,16 +136,11 @@ fetch (url3)
 
         if(buscador.value == ""){
           alert.innerText = 'el campo esta vacio master';
-          closeIcon.style.display = 'inline';            
-        
-
-
-            closeIcon.style.display = 'inline'            
+          closeIcon.style.display = 'inline'            
         } else if( buscador.value.length < 3){
 
           alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
-            
-            closeIcon.style.display = 'inline';
+            closeIcon.style.display = 'inline'
         } else {
             this.submit();
         }

@@ -190,7 +190,7 @@ max-width: 50px;
   }
 .don1  { 
     border-bottom: 2px solid white;
-    justify-content: space-between;
+   
 
 
    }
@@ -224,6 +224,18 @@ flex-direction: row ;
     padding: 40px;
     height: fit-content;
 }
+.columna{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+.na {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
 
 .O {
@@ -234,16 +246,14 @@ flex-direction: row ;
     font-size: 20px;
     height:100px;
     margin: 10px;
-
-    
-
 }
 
 .pot{
     font-size: 37px;
-    text-align: center;
+    
 
 }
+
 
 .ozu {
     display: flex;
@@ -255,11 +265,16 @@ flex-direction: row ;
     list-style-type: none;
 
 }
-.toldo{
+
+.filas{
+    list-style-type: none;
     display: flex;
-    flex: wrap;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
+
+
 
 /* -------------------- detalle.genero.html -------------------- */
 
@@ -439,8 +454,13 @@ header{
   
     /* index.html */
 
+.art{
+        align-self: center;
+        flex-direction: row;
+        align-items: stretch;
+    }    
 
-section{
+section {
         flex-direction: column;
         justify-content: center;
     }
@@ -534,7 +554,7 @@ height: 1800px;
 
 
 
-}
+
 
 /*Alerta personalizada*/
 
@@ -542,6 +562,13 @@ height: 1800px;
     color: red;
 }
 
+.alIcono { 
+    display: none;
+    color: yellow;
+}
+
 body {
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
   }
+
+}
