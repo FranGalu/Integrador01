@@ -98,6 +98,7 @@ section {
 .titulo{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
+    text-align: center;
     
 }
 
@@ -114,12 +115,21 @@ ul.default {
 }
 
 .lista {
-    padding: 0px 0px 40px 0px;
     display: flex;
     flex-wrap: wrap;
     max-width: 300px;
-    justify-content: end;
+    min-height: 400px;
     
+    
+}
+
+.espacio{
+    min-height: 94.9px ;
+    text-align: center;
+}
+
+.achicar{
+    width: 220px;
 }
 
 .nombres {
@@ -130,6 +140,7 @@ ul.default {
  
 .play {
  width: 50px ;
+ 
  
 
 }
@@ -154,7 +165,7 @@ text-align: center;
 .favorito {
 size: 6px;
 width: 50px;
-display: flex;
+max-width: 50px;
 }
 .D {
     align-content: center;
@@ -216,12 +227,8 @@ flex-direction: row ;
 
 
 .O {
-    font-size: 100px;
-    border-bottom: double;
-    height: 105px;
-    margin: 10px;
-
-    
+    font-size: 50px;
+     
 }
 .top {
     font-size: 20px;
@@ -239,14 +246,19 @@ flex-direction: row ;
 }
 
 .ozu {
-display: flex;
-flex: wrap;
+    display: flex;
+    flex: wrap;
 }
 
 
 .sin{
     list-style-type: none;
 
+}
+.toldo{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
 }
 
 /* -------------------- detalle.genero.html -------------------- */
@@ -427,11 +439,7 @@ header{
   
     /* index.html */
 
-.art{
-        
 
-        
-    }
 section{
         flex-direction: column;
         justify-content: center;

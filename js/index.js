@@ -28,13 +28,20 @@ fetch(url1)
            let canciones = '';
          //Bucle para recorrer los datos
          for(let i=0; i<info.length; i++){
-             canciones += `<li class="lista"><p class="nombres">  ${info[i].title}</p>
-                            <p class= "nombres"> ${info[i].artist.name} </p>
-                             <a href="detalle-cancion.html?id=${info[i].id}"> 
-                 <img class="principal" src="${info[i].album.cover_medium}" alt="foto" <a href="detalle-cancion.html"> <i><img class= "play" src="./img/play4.png" alt=""> </i> </a>
-                             </a>
-                         </li> 
-                                 `
+             canciones += `<li class="lista">
+                            <div class="achicar">
+                              <div class="espacio">
+                                <p class="nombres">  ${info[i].title}</p>                            
+                                <p class= "nombres">Por: ${info[i].artist.name} </p>   
+                              </div>                           
+                              <a href="detalle-cancion.html?id=${info[i].id}"> 
+                                <img class="principal" src="${info[i].album.cover_medium}" alt="foto" 
+                            </a>
+                            </div>
+                            <a href="detalle-cancion.html?id=${info[i].id}"> 
+                              <img class= "play" src="./img/play4.png" alt="">
+                            </a>                            
+                          </li>`
          }
 
          lista.innerHTML += canciones;
@@ -59,15 +66,20 @@ fetch (url2)
               let albumes = '';
 
         for(let i=0; i<info.length; i++){
-                albumes +=`<li class="lista"><p class="nombres">${info[i].title}</p>
-                                             <p class="nombres">${info[i].artist.name}</p>
-                <a href="detalle-album.html?id=${info[i].id}"> 
-               
-                </a>
-                <a href="detalle-album.html?id=${info[i].id}">
-                    <img class="principal" src="${info[i].cover_medium}" alt="foto"><i><img class= play  src="./img/play4.png" alt=""></i>
-                    </a>
-                </li>    `
+                albumes +=`<li class="lista">
+                            <div class="achicar">
+                              <div class="espacio">
+                                <p class="nombres">${info[i].title}</p>
+                                <p class="nombres">Por: ${info[i].artist.name}</p>
+                              </div>  
+                              <a href="detalle-album.html?id=${info[i].id}">
+                                <img class="principal" src="${info[i].cover_medium}" alt="foto">
+                              </a>
+                            </div>
+                            <a href="detalle-album.html?id=${info[i].id}">    
+                              <img class= play  src="./img/play4.png" alt="">
+                            </a>
+                          </li>`
                                 }
                                     lista.innerHTML += albumes;
                                 })
@@ -89,14 +101,19 @@ fetch (url3)
                let artistas= '';
         
            for(let i=0; i<info.length; i++){
-            artistas +=`    <li class="lista">
-                          <p class="nombres">${info[i].name}</p> 
-            <a href="detalle-artista.html?id=${info[i].id}"> 
-               </a>
-               <a href="detalle-artista.html?id=${info[i].id}"> 
-                <img class="principal" src="${info[i].picture_medium}" alt="foto"><i><img class= play  src="./img/play4.png" alt=""></i>
-                </a>
-                          </li> `
+            artistas +=`<li class="lista">
+                          <div class="achicar">
+                            <div class="espacio">
+                              <p class="nombres">${info[i].name}</p> 
+                            </div>
+                            <a href="detalle-artista.html?id=${info[i].id}"> 
+                              <img class="principal" src="${info[i].picture_medium}" alt="foto">
+                            </a>
+                          </div>  
+                          <a href="detalle-artista.html?id=${info[i].id}">               
+                            <img class= play  src="./img/play4.png" alt="">
+                          </a>
+                        </li> `
 
                             }
                                 lista.innerHTML += artistas;
