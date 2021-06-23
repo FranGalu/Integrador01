@@ -423,7 +423,9 @@ header{
     /* index.html */
 
 .art{
-        
+        align-self: center;
+        flex-direction: row;
+        align-items: stretch;
 
         
     }
@@ -527,6 +529,11 @@ height: 1800px;
 
 .alerta {
     color: red;
+}
+
+.alIcono { 
+    display: none;
+    color: yellow;
 }
 
 body {
