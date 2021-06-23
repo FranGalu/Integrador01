@@ -74,4 +74,9 @@ fetch(url1)
             this.submit();
         }
     })
+    buscador.addEventListener('input', function(){
+        alerta.innerText = '';
+        closeIcon.style.display = 'none';
+    })
+    
 

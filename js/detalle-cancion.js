@@ -103,6 +103,11 @@ let url= proxy + dcancion;
                   this.submit();
               }
           })
+          buscador.addEventListener('input', function(){
+            alerta.innerText = '';
+            closeIcon.style.display = 'none';
+        })
+        
 
 
             

@@ -22,7 +22,7 @@ let urlTrack = proxy + searchTrack
 let urlAlbum = proxy + searchAlbum
 let urlArtist = proxy + searchArtist
 
-          fetch(urlTrack)
+         fetch(urlTrack)
               .then(function(response){
                       return response.json(); 
               })
@@ -134,3 +134,8 @@ let urlArtist = proxy + searchArtist
                     this.submit();
                 }
             })
+            buscador.addEventListener('input', function(){
+                alerta.innerText = '';
+                closeIcon.style.display = 'none';
+            })
+            
