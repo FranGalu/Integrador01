@@ -13,19 +13,19 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 let dcancion = `https://api.deezer.com/track/${id}`;
 let url= proxy + dcancion; 
 
-         fetch (url)
-            .then(function(response){
-                return response.json();
+   fetch (url)
+       .then(function(response){
+           return response.json();
             })
-            .then(function(data){
-              console.log(data); 
+       .then(function(data){
+          console.log(data); 
 
-              let title = document.querySelector('.daki');
-                          title.innerText = data.title;    
+         let title = document.querySelector('.daki');
+          title.innerText = data.title;    
 
-              let artist= document.querySelector ('.artist a');
-                          artist.href = `detalle-artista.html?id=${data.artist.id}`;
-                          artist.innerText = data.artist.name;
+         let artist= document.querySelector ('.artist a');
+              artist.href = `detalle-artista.html?id=${data.artist.id}`;
+              artist.innerText = data.artist.name;
             
               let tapa = document.querySelector('.dakiti');
                         tapa.src = data.album.cover_big;
@@ -38,11 +38,6 @@ let url= proxy + dcancion;
                          player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
              
             
-
-    
-
-       
-
         artist.style.color = "white";
         artist.style.fontSize = "40px"; 
            
@@ -53,10 +48,10 @@ let url= proxy + dcancion;
          .catch(function (error){
              console.log('El error fue: ' + error);})
 
-             //AGREGAR la lista de playlist de favoritos
-             //necesitamos un array
+   //AGREGAR la lista de playlist de favoritos
+     //necesitamos un array
              let favoritos = [];
-            //Recuperar datos del Storage
+    //Recuperar datos del Storage
             let recuperoStorage = localStorage.getItem('favoritos');
           //AGREGAR info del local Storage en el array
           if(recuperoStorage != null){
@@ -64,7 +59,7 @@ let url= proxy + dcancion;
           }
            //Quitar favoritos
            if(favoritos.includes(id)){
-             document.querySelector('.presione').innerText = "Quitar de mi playlist de favoritos";
+             document.querySelector('.presione').innerText = "Quitar de mi playlist";
            }
 
 
@@ -80,11 +75,11 @@ let url= proxy + dcancion;
               if(favoritos.includes(id)){
                   let idASacar = favoritos.indexOf(id);
                   favoritos.splice(idASacar,1);
-                  document.querySelector('.presione').innerText = "Agregar a mi playlist de favoritos";
+                  document.querySelector('.presione').innerText = "Agregar a mi playlist";
               } else{
                   favoritos.push(id);
                   console.log(favoritos);
-                  document.querySelector('.presione').innerText = "Quitar de mi playlist de favoritos";
+                  document.querySelector('.presione').innerText = "Quitar de mi playlist ";
             }
              
              //necesitamos guardar la informacion en el storage
