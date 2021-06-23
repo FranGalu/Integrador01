@@ -50,17 +50,14 @@ let url = proxy + album;
         
                    lista.innerHTML += `
                     <div class="don3">
-                        <div class="dondon">
-                            
-        
-                            <li class="don1">${tracks[i].title}</li>
-        
-                          
-                        </div>  
-                        
+                    <a class="blanco" href="detalle-cancion.html?id=${tracks[i].id}">
+                        <li class="don1"> 
+                        ${tracks[i].title} </li>
+                   
+                    </a> 
                     </div>      `
-            
-    
+
+                  
          }
          
 
