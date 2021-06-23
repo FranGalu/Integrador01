@@ -34,9 +34,11 @@ let url2 = proxy + tracklist;
                     console.log(data);
                         for (let i=0; i<data.data.length; i++){
                           track += `
-                                        <a class="blanco" href="detalle-cancion.html?id=${data.data[i].id}"> </a> 
+                                        <a class="blanco" href="detalle-cancion.html?id=${data.data[i].id}">
                                         <li class="sin"> <p> ${data.data[i].title}</p>
-                                        </li> 
+                                        </li>  
+                                        </a> 
+                                        
                                     `
 
                         }
