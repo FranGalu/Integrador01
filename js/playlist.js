@@ -1,6 +1,8 @@
 //La lista de temas debe recuperarse desde el storage del navegador y presentarse al usuario. Cada tema será un link que lleve a su correspondiente página de detalle.
 
+//Recuperando storage
 let recuperoStorage = localStorage.getItem('favoritos');
+//Traigo el array
 let favoritos = JSON.parse(recuperoStorage);
 //Donde quiero los datos?
 let otra = document.querySelector('.otra');
@@ -9,48 +11,32 @@ let otra = document.querySelector('.otra');
 
 for (let i=0; i<favoritos.length; i++){
      buscarYMostrarFavoritos(favoritos[i]);
-}
-
- function buscarYMostrarFavoritos(id){
+      }
+function buscarYMostrarFavoritos(id){
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let playlist = `https://api.deezer.com/track/${id}`; 
 let url = proxy + playlist;
 
-        fetch(url)
-          .then(function(response){
-              return response.json();
-          })
-          .then(function (data){
-            let resultados = '';
-            
-<<<<<<< HEAD
-            let otra = document.querySelector('.otra a'); 
-           
-      
-            otra.innerHTML += ` 
-            <a href=""></a>  
-        <p class="tul">${data.title} </p>
-            <img class= "imgs" src="${data.artist.picture_medium}" >
-            `
-=======
-            let otra = document.querySelector('.otra a') 
-            otra.innerText = data.title;
-            
-            
+     fetch(url)
+       .then(function(response){
+             return response.json();
+        })
+         .then(function (data){
+           console.log(data)
+           let resultados = '';
+          otra.innerHTML += `
+          <ul class= "favs"  >
+            <li>
+                <h2 class="tul">${data.title} </h2>
+                <a href="detalle-cancion.html?id=${data.id}">  <img class= "imgs" src="${data.artist.picture_medium}"> </a>
+                 </li> 
 
-            for (let i = 0; i < favoritos.length; i++) {
-                otra.innerHTML += ` 
-            
-        <p class="tul">${data.title} </p>
-            <a href="detalle-cancion.html?id=${data.title}"><img class= "imgs" src="${data.artist.picture_medium}" ></a>`
-                
-            }
->>>>>>> 951e65b3af2133c687d3a21263fc808cd18afe91
-        
+           </ul>`
+             
 
-          } ) 
-          .catch(function (error){
-              console.log(error);
-          })
+         } ) 
+       .catch(function (error){
+           console.log(error);
+         })
         
-        }
+}
