@@ -31,16 +31,16 @@ let url= proxy + dcancion;
                        disco.innerText = data.album.title;  
                        disco.href = `detalle-album.html?id=${data.album.id}`;
 
-    //El player para escuchar la canción.La posibilidad de agregar la canción a “mi playlist”
+    //El player para escuchar la canción.
               let player = document.querySelector('.player');
                        player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
              
             
         artist.style.color = "white";
-        artist.style.fontSize = "40px"; 
+        artist.style.fontSize = "20px"; 
            
         disco.style.color = "white";
-        disco.style.fontSize = "40px";
+        disco.style.fontSize = "20px";
             })
           
          .catch(function (error){
@@ -48,7 +48,8 @@ let url= proxy + dcancion;
 
 
 
-   //AGREGAR la lista de playlist de favoritos
+   //La posibilidad de agregar la canción a “mi playlist”
+
      //necesitamos un array
              let favoritos = [];
     //Recuperar datos del Storage

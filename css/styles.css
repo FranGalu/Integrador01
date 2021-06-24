@@ -173,7 +173,7 @@ text-align: center;
 }
 .dakiti {
     width: 500px;
-    padding: 40px;
+    padding: 10px;
 
 }
 .daki{
@@ -202,6 +202,12 @@ color: white;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+}
+.artist{
+    font-size: 20px;
+}
+.album{
+    font-size: 20px;
 }
 /* -------------------- detalle-album.html -------------------- */
 

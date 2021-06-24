@@ -18,7 +18,7 @@ fetch(url1)
           console.log(data);
           //Nos quedamos solo con el array de datos
           let info = data.data
-           // Obtenermos contendor
+           // Obtenemos contendor
            let lista = document.querySelector('.canciones');
            //Definimos variable para poner el contenido
            let canciones = '';
@@ -121,7 +121,7 @@ fetch (url3)
       })
 
 
-      
+
     //Formulario
        
     let formulario = document.querySelector('.buscador');
