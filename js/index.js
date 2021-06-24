@@ -1,10 +1,11 @@
 
 
-
+//gif cuando la página tarda en cargar
 window.addEventListener('load', function(){
   let loader = document.querySelector('.load');
   loader.style.display = 'none';
 
+  //index 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let canciones = 'https://api.deezer.com/chart/0/tracks';
 let url1 = proxy + canciones; 
@@ -79,9 +80,9 @@ fetch (url2)
                                     lista.innerHTML += albumes;
                                 })
 
-       .catch(function (error){
-     console.log('El error fue: ' + error);
-       })
+         .catch(function (error){
+            console.log('El error fue: ' + error);
+        })
    
 let artistas = 'https://api.deezer.com/chart/0/artists';
 let url3 = proxy + artistas;
@@ -118,6 +119,9 @@ fetch (url3)
   console.log('El error fue: ' + error);
 
       })
+
+
+      
     //Formulario
        
     let formulario = document.querySelector('.buscador');
