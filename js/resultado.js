@@ -95,25 +95,17 @@ let urlArtist = proxy + searchArtist
                     
                       for(let i=0; i<data.data.length; i++){
 
-                        if (2 = 3) {
-                        devuelve.innerText += "No hay resultados para la busqueda de artistas"
-                                
-                        }
-
-                        else (
-                            
-                              devuelve += `<a class="blanco" href="detalle-artista.html?id=${data.data[i].id}">
+                       
+                            devuelve += `<a class="blanco" href="detalle-artista.html?id=${data.data[i].id}">
                                           <li>
                                               <p>${data.data[i].name}</p>                                                                          
                                           </li>
-                                          <a/>` 
-     
-                        )}
+                                          <a/>`  
+                        
+                        }
                       
                       lista.innerHTML += devuelve
         
-
-
               })
 
               .catch(function (error){

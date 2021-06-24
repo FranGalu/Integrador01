@@ -16,72 +16,75 @@ let url = proxy + artista;
 let url2 = proxy + tracklist;
 let url3 = proxy + tracklistCompleta;
 
-   fetch(url)
-      .then( function(response){
-          return response.json(); 
-      })
-      .then( function(data){
-          console.log(data);
+fetch(url)
+        .then( function(response){
+            return response.json(); 
+        })
+        .then( function(data){
+            console.log(data);
 
-         let nombre = document.querySelector('.O');
-         let imagen = document.querySelector('.ozuna');
-         let trackContainer = document.querySelector('.re');
-         let track = '';
-         
-     fetch(url2)
-         .then( function(response){
-                 return response.json();
-                })          
-         .then( function(data){
-              console.log(data);
-       for (let i=0; i<data.data.length; i++){
-             track += `
-                   <a class="blanco" href="detalle-album.html?id=${data.data[i].id}">
-                          <li class="sin"> <p> ${data.data[i].title}</p>
-                          </li>  
-                   </a>  `
-
-              }
-            trackContainer.innerHTML += track
-                })
-        
-        .catch(function (error){
-             console.log('El error fue: ' + error);
-                    })
+            let nombre = document.querySelector('.O');
+            let imagen = document.querySelector('.ozuna');
                             
-        imagen.src = data.picture_big;
-         nombre.innerText = data.name
-           })
+            imagen.src = data.picture_big;
+            nombre.innerText = data.name
+        })
      
         .catch(function (error){
             console.log('El error fue: ' + error);
-      })
+        })
 
-    fetch(url3)
+         
+fetch(url2)
+        .then( function(response){
+            return response.json();
+        })          
+        .then( function(data){
+            console.log(data);
+
+            let trackContainer = document.querySelector('.re');
+            let track = '';
+       
+            for (let i=0; i<data.data.length; i++){
+                track += 
+                        `<a class="blanco" href="detalle-album.html?id=${data.data[i].id}">
+                            <li class="sin"> <p> ${data.data[i].title}</p>
+                            </li>  
+                        </a>`
+            }
+            
+            trackContainer.innerHTML += track
+        })
+        
+        .catch(function (error){
+             console.log('El error fue: ' + error);
+        })
+
+fetch(url3)
        .then( function(response){
-          return response.json(); 
+            return response.json(); 
         })
        .then( function(data){
-          console.log(data);
+            console.log(data);
 
-          let filasContainer = document.querySelector('.filas')
-          let filas = ''
-          for (let i=0; i<data.data.length; i++){
-              filas += `
-                            <li class="columna"> 
-                                <p class="nombres"> ${data.data[i].title_short}</p> 
-                                <a href="detalle-cancion.html?id=${data.data[i].id}">
-                                    <img class="principal" src="${data.data[i].album.cover_medium}" alt="">
-                                </a>
-                            </li>
-                        `    
+            let filasContainer = document.querySelector('.filas')
+            let filas = ''
+            
+            for (let i=0; i<data.data.length; i++){
+                filas += 
+                        `<li class="columna"> 
+                            <p class="nombres"> ${data.data[i].title_short}</p> 
+                            <a href="detalle-cancion.html?id=${data.data[i].id}">
+                                <img class="principal" src="${data.data[i].album.cover_medium}" alt="">
+                            </a>
+                        </li>`    
             }
-        filasContainer.innerHTML += filas
         
-          })
-      .catch(function (error){
+            filasContainer.innerHTML += filas
+        })
+       .catch(function (error){
            console.log('El error fue: ' + error);
-      })
+        })
      
     
 //Formulario
