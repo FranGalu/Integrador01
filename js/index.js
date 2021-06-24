@@ -127,8 +127,9 @@ fetch (url3)
        
     let formulario = document.querySelector('.buscador');
     let buscador = document.querySelector('[name="buscar"]');
-    let closeIcon = document.querySelector('.alIcono');
     let alert = document.querySelector('.alerta');
+    let closeIcon = document.querySelector('.alIcono');
+    
 
 
     formulario.addEventListener('submit', function(e){
@@ -138,9 +139,8 @@ fetch (url3)
           alert.innerText = 'el campo esta vacio master';
           closeIcon.style.display = 'inline'            
         } else if( buscador.value.length < 3){
-
           alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
-            closeIcon.style.display = 'inline'
+          closeIcon.style.display = 'inline'
         } else {
             this.submit();
         }
@@ -148,7 +148,33 @@ fetch (url3)
 
    //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
    buscador.addEventListener('input', function(){
-    alerta.innerText = '';
+    alert.innerText = '';
     closeIcon.style.display = 'none';
 })
+})
+
+let formulario = document.querySelector('form');
+let campoBuscar = document.querySelector('[name="milanesa"]');
+let alert = document.querySelector('.alert');
+let closeIcon = document.querySelector('.closeIcon');
+
+
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    if(campoBuscar.value == ""){
+        alert.innerText = 'El campo no puede estar vacío';
+        closeIcon.style.display = 'inline'            
+    } else if( campoBuscar.value.length < 3){
+        alert.innerText = 'Por favor ingrese más de 3 caracteres';
+        closeIcon.style.display = 'inline'
+    } else {
+        this.submit();
+    }
+})
+
+//limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
+campoBuscar.addEventListener('input', function(){
+    alert.innerText = '';
+    closeIcon.style.display = 'none';
 })

@@ -107,7 +107,31 @@ let url= proxy + dcancion;
             alerta.innerText = '';
             closeIcon.style.display = 'none';
         })
-        
+ let formulario = document.querySelector('form');
+let campoBuscar = document.querySelector('[name="milanesa"]');
+let alert = document.querySelector('.alert');
+let closeIcon = document.querySelector('.closeIcon');
+
+
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    if(campoBuscar.value == ""){
+        alert.innerText = 'El campo no puede estar vacío';
+        closeIcon.style.display = 'inline'            
+    } else if( campoBuscar.value.length < 3){
+        alert.innerText = 'Por favor ingrese más de 3 caracteres';
+        closeIcon.style.display = 'inline'
+    } else {
+        this.submit();
+    }
+})
+
+//limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
+campoBuscar.addEventListener('input', function(){
+    alert.innerText = '';
+    closeIcon.style.display = 'none';
+})
 
 
             
