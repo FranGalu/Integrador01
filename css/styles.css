@@ -198,6 +198,11 @@ color: white;
 .playl {
     text-align: left;
 }
+.col{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 /* -------------------- detalle-album.html -------------------- */
 
 .don {
