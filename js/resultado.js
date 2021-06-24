@@ -6,6 +6,10 @@
 //Si la búsqueda tarda en cargar deberá aparecer un spinner, gif animado o mensaje que dé al usuario referencia de que el procesos se está ejecutando. El elemento debe ocultarse una vez que el contenido de la página haya cargado por completo.
 
 
+window.addEventListener('load', function(){
+        let loader = document.querySelector('.load');
+        loader.style.display = 'none';
+
 
 let queryString = location.search
 let queryStringToObject = new URLSearchParams(queryString)
@@ -148,5 +152,5 @@ let urlArtist = proxy + searchArtist
     alert.innerText = '';
     closeIcon.style.display = 'none';
 })
-
+})
             

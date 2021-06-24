@@ -1,3 +1,8 @@
+
+window.addEventListener('load', function(){
+    let loader = document.querySelector('.load');
+    loader.style.display = 'none';
+
 //La lista de temas debe recuperarse desde el storage del navegador y presentarse al usuario. Cada tema será un link que lleve a su correspondiente página de detalle.
 
 //Recuperando storage
@@ -68,4 +73,4 @@ buscador.addEventListener('input', function(){
  alert.innerText = '';
  closeIcon.style.display = 'none';
 })
-
+})

@@ -1,5 +1,7 @@
 //La información debe provenir de forma dinámica desde la API. Al hacer click sobre un género accederemos a la página de detalle con la información del género clickeado.
-
+window.addEventListener('load', function(){
+    let loader = document.querySelector('.load');
+    loader.style.display = 'none';
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let generos = 'https://api.deezer.com/genre';
@@ -60,3 +62,4 @@ buscador.addEventListener('input', function(){
 })
     
 
+})

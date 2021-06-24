@@ -202,6 +202,11 @@ color: white;
     background-color: rgb(24, 4, 27);
     background-size: 0 ;
     padding: 3px;
+    margin-right: 50px;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row ;
  
   }
 .don1  { 
@@ -219,16 +224,8 @@ color: white;
        width: 600px;
    }
 
-.don3 {
-display: flex;
-flex-wrap: wrap;
-flex-direction: row ;
-   }
-   
-.dondon {
-    margin-right: 50px;
-    font-size: 25px;
-}
+
+
 .tld {
     text-align: center;
     background-color:none;
