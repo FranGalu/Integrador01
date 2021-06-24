@@ -166,13 +166,19 @@ font-size: 30px;
 color: white; 
 text-align: center;
 }
-
+.detalleCancion{
+    font-size: 30px;
+color: white; 
+text-align: center;
+}
 .dakiti {
     width: 500px;
     padding: 40px;
+
 }
 .daki{
     font-size: 50px;
+    
 }
 .favorito {
 size: 6px;
