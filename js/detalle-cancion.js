@@ -13,6 +13,7 @@ let url= proxy + dcancion;
        .then(function(response){
            return response.json();
             })
+
        .then(function(data){
           console.log(data); 
 
@@ -32,7 +33,7 @@ let url= proxy + dcancion;
 
     //El player para escuchar la canción.La posibilidad de agregar la canción a “mi playlist”
               let player = document.querySelector('.player');
-                         player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
+                       player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
              
             
         artist.style.color = "white";
