@@ -1,9 +1,5 @@
-//El player para escuchar la canción.La posibilidad de agregar la canción a “mi playlist”.El link para ver la playlist personal.
-//La información de cada página de detalles debe provenir de forma dinámica desde la API. Para acceder a cada página de detalle deberán incorporar query strings en la URL (indicando qué número de artist/album/track) para obtener los datos puntuales desde la API.
-//Cada referencia en las páginas de detalle debe permitir navegación. Ejemplo: si en el detalle de canciones se ve el nombre de un artista al clickear sobre el nombre del artista el sitio debe llevarme al detalle del cantante.
-//Las canciones seleccionadas como favoritas deben guardarse en el storage del navegador. Si la canción fue seleccionada debe indicarse la posibilidad de quitarla de la playlist.
 
-
+//Detalle de cada canción
 
 let queryString = location.search;
 let queryStringToObject = new URLSearchParams(queryString);
@@ -34,6 +30,7 @@ let url= proxy + dcancion;
                        disco.innerText = data.album.title;  
                        disco.href = `detalle-album.html?id=${data.album.id}`;
 
+    //El player para escuchar la canción.La posibilidad de agregar la canción a “mi playlist”
               let player = document.querySelector('.player');
                          player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
              
@@ -47,6 +44,8 @@ let url= proxy + dcancion;
           
          .catch(function (error){
              console.log('El error fue: ' + error);})
+
+
 
    //AGREGAR la lista de playlist de favoritos
      //necesitamos un array

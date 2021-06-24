@@ -35,8 +35,8 @@ let url = proxy + album;
         let genero = document.querySelector('.genero')
         let genres = data.genres.data
         
-        for (let i = 0; i < genres.length; i++) {
-            genero.innerHTML += `Genero: <a class="blanco" href="detalle-genero.html?id=${genres[i].id}"> ${genres[i].name}
+    for (let i = 0; i < genres.length; i++) {
+         genero.innerHTML += `Genero: <a class="blanco" href="detalle-genero.html?id=${genres[i].id}"> ${genres[i].name}
                                 </a> ` 
             
         }
@@ -44,12 +44,9 @@ let url = proxy + album;
         let tracks = data.tracks.data;
         let lista = document.querySelector('.cancionesdon');
 
+    for(let i=0; i<tracks.length; i++){
         
-    
-   
-        for(let i=0; i<tracks.length; i++){
-        
-                   lista.innerHTML += `
+          lista.innerHTML += `
                     <div class="don3">
                     <a class="blanco" href="detalle-cancion.html?id=${tracks[i].id}">
                         <li class="don1"> 
@@ -58,25 +55,22 @@ let url = proxy + album;
                     </a> 
                     </div>      `
 
-                  
-         }
-         
-
-    })
-    .catch(function (error){
+                 }
+      })
+         .catch(function (error){
         console.log('El error fue: ' + error);
-    })
-   //Formulario
+      })
+   
+   
+      //Formulario
        
- let formulario = document.querySelector('.buscador');
- let buscador = document.querySelector('[name="buscar"]');
- let alert = document.querySelector('.alerta');
- let closeIcon = document.querySelector('.alIcono');
+    let formulario = document.querySelector('.buscador');
+    let buscador = document.querySelector('[name="buscar"]');
+    let alert = document.querySelector('.alerta');
+    let closeIcon = document.querySelector('.alIcono');
  
-
-
- formulario.addEventListener('submit', function(e){
-     e.preventDefault();
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
 
      if(buscador.value == ""){
        alert.innerText = 'el campo esta vacio master';
@@ -87,7 +81,7 @@ let url = proxy + album;
      } else {
          this.submit();
      }
- })
+  })
 
 //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
 buscador.addEventListener('input', function(){
