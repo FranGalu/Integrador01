@@ -30,43 +30,40 @@ let url3 = proxy + tracklistCompleta;
          let trackContainer = document.querySelector('.re');
          let track = '';
          
-            fetch(url2)
-                .then( function(response){
-                    return response.json();
+     fetch(url2)
+         .then( function(response){
+                 return response.json();
                 })          
-                .then( function(data){
-                    console.log(data);
-                        for (let i=0; i<data.data.length; i++){
-                          track += `
-                                        <a class="blanco" href="detalle-album.html?id=${data.data[i].id}">
-                                        <li class="sin"> <p> ${data.data[i].title}</p>
-                                        </li>  
-                                        </a> 
-                                        
-                                    `
+         .then( function(data){
+              console.log(data);
+       for (let i=0; i<data.data.length; i++){
+             track += `
+                   <a class="blanco" href="detalle-album.html?id=${data.data[i].id}">
+                          <li class="sin"> <p> ${data.data[i].title}</p>
+                          </li>  
+                   </a>  `
 
-                        }
-                   trackContainer.innerHTML += track
+              }
+            trackContainer.innerHTML += track
                 })
-                .catch(function (error){
-                    console.log('El error fue: ' + error);
+        
+        .catch(function (error){
+             console.log('El error fue: ' + error);
                     })
                             
-
-         imagen.src = data.picture_big;
+        imagen.src = data.picture_big;
          nombre.innerText = data.name
-         
-
+           })
+     
+        .catch(function (error){
+            console.log('El error fue: ' + error);
       })
-      .catch(function (error){
-         console.log('El error fue: ' + error);
-      })
 
-fetch(url3)
-      .then( function(response){
+    fetch(url3)
+       .then( function(response){
           return response.json(); 
-      })
-      .then( function(data){
+        })
+       .then( function(data){
           console.log(data);
 
           let filasContainer = document.querySelector('.filas')
@@ -83,37 +80,18 @@ fetch(url3)
             }
         filasContainer.innerHTML += filas
         
-
-
-      })
+          })
       .catch(function (error){
            console.log('El error fue: ' + error);
       })
-      formulario.addEventListener('submit', function(e){
-        e.preventDefault();
-
-        if(buscador.value == ""){
-          alert.innerText = 'el campo esta vacio master';
-          closeIcon.style.display = 'inline'            
-        } else if( buscador.value.length < 3){
-
-          alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
-            closeIcon.style.display = 'inline'
-        } else {
-            this.submit();
-        }
-    })
-    buscador.addEventListener('input', function(){
-        alerta.innerText = '';
-        closeIcon.style.display = 'none';
-    })
+     
+    
 //Formulario
        
 let formulario = document.querySelector('.buscador');
 let buscador = document.querySelector('[name="buscar"]');
 let alert = document.querySelector('.alerta');
 let closeIcon = document.querySelector('.alIcono');
-
 
 
 formulario.addEventListener('submit', function(e){

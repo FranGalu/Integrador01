@@ -14,33 +14,31 @@ let otra = document.querySelector('.otra');
  
 //Recorrer array
 
-for (let i=0; i<favoritos.length; i++){
+  for (let i=0; i<favoritos.length; i++){
      buscarYMostrarFavoritos(favoritos[i]);
       }
-function buscarYMostrarFavoritos(id){
-let proxy = 'https://cors-anywhere.herokuapp.com/';
-let playlist = `https://api.deezer.com/track/${id}`; 
-let url = proxy + playlist;
+   function buscarYMostrarFavoritos(id){
+     let proxy = 'https://cors-anywhere.herokuapp.com/';
+     let playlist = `https://api.deezer.com/track/${id}`; 
+     let url = proxy + playlist;
 
-     fetch(url)
+   fetch(url)
        .then(function(response){
              return response.json();
         })
          .then(function (data){
-           console.log(data)
-           let resultados = '';
-          otra.innerHTML += `
-          <ul class= "favs"  >
-            <li>
-                <h2 class="tul">${data.title} </h2>
+            console.log(data)
+            let resultados = '';
+           otra.innerHTML += ` <ul class= "favs"  >
+                            <li>
+                 <h2 class="tul">${data.title} </h2>
                 <a href="detalle-cancion.html?id=${data.id}">  <img class= "imgs" src="${data.artist.picture_medium}"> </a>
-                 </li> 
-
-           </ul>`
+                           </li> 
+                              </ul>`
              
 
          } ) 
-       .catch(function (error){
+        .catch(function (error){
            console.log(error);
          })
         
@@ -54,23 +52,24 @@ let url = proxy + playlist;
  
 
 
- formulario.addEventListener('submit', function(e){
-     e.preventDefault();
+     formulario.addEventListener('submit', function(e){
+       e.preventDefault();
 
-     if(buscador.value == ""){
-       alert.innerText = 'el campo esta vacio master';
-       closeIcon.style.display = 'inline'            
-     } else if( buscador.value.length < 3){
-       alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
-       closeIcon.style.display = 'inline'
+       if(buscador.value == ""){
+         alert.innerText = 'el campo esta vacio master';
+         closeIcon.style.display = 'inline'            
+    } else if( buscador.value.length < 3){
+         alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
+         closeIcon.style.display = 'inline'
      } else {
          this.submit();
      }
- })
+    })
 
 //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
-buscador.addEventListener('input', function(){
- alert.innerText = '';
- closeIcon.style.display = 'none';
+    buscador.addEventListener('input', function(){
+      alert.innerText = '';
+      closeIcon.style.display = 'none';
+    })
 })
-})
+

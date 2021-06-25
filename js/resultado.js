@@ -99,8 +99,8 @@ let urlArtist = proxy + searchArtist
                     
                       for(let i=0; i<data.data.length; i++){
 
-                        if (data.data[i].length = null) {
-                        devuelve += '<p>No hay resultados para la busqueda de artistas  </p>'
+                        if (2 = 3) {
+                        devuelve.innerText += "No hay resultados para la busqueda de artistas"
                                 
                         }
 

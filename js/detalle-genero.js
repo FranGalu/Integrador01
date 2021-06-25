@@ -9,6 +9,7 @@ let queryString = location.search;
 let queryStringToObject = new URLSearchParams(queryString);
 let id = queryStringToObject.get('id');
 
+
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let genre = `https://api.deezer.com/genre/${id}/artists`;
 let url1 = proxy + genre;
@@ -16,33 +17,34 @@ let url1 = proxy + genre;
 let genre2 = `https://api.deezer.com/genre/${id}`;
 let url2 = proxy + genre2;
 
-fetch(url2)
+  fetch(url2)
       .then(function(response){
           return response.json(); 
       })
       .then(function(data){
           console.log(data);
 
-          let nombre = document.querySelector('.cualca')
-          let imagen = document.querySelector('.image')
-          nombre.innerText = data.name
-          imagen.src = data.picture_medium
+          let nombre = document.querySelector('.cualca');
+          let imagen = document.querySelector('.image');
+          nombre.innerText = data.name;
+          imagen.src = data.picture_medium;
         })
       
-          .catch(function (error){
+      .catch(function (error){
             console.log('El error fue: ' + error);
          })
+  
+let genre = `https://api.deezer.com/genre/${id}/artists`;
+let url1 = proxy + genre;
 
-
-
-fetch(url1)
+   fetch(url1)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
         console.log(data);
         let generosContainer = document.querySelector('.sacar');
-        let generos = ''
+        let generos = '';
         
 
        
@@ -56,20 +58,21 @@ fetch(url1)
                         </li>`
         }
 
-        generosContainer.innerHTML += generos
+        generosContainer.innerHTML += generos;
     })
 
 
-    .catch(function(error){
-        console.log(error);
+      .catch(function(error){
+         console.log(error);
     })
+
+
     //Formulario
        
- let formulario = document.querySelector('.buscador');
- let buscador = document.querySelector('[name="buscar"]');
- let alert = document.querySelector('.alerta');
- let closeIcon = document.querySelector('.alIcono');
- 
+   let formulario = document.querySelector('.buscador');
+   let buscador = document.querySelector('[name="buscar"]');
+   let alert = document.querySelector('.alerta');
+   let closeIcon = document.querySelector('.alIcono');
 
 
  formulario.addEventListener('submit', function(e){
@@ -87,9 +90,9 @@ fetch(url1)
  })
 
 //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
-buscador.addEventListener('input', function(){
- alert.innerText = '';
- closeIcon.style.display = 'none';
+   buscador.addEventListener('input', function(){
+     alert.innerText = '';
+     closeIcon.style.display = 'none';
 })
     
 

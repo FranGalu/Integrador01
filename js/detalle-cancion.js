@@ -6,6 +6,7 @@ window.addEventListener('load', function(){
   let loader = document.querySelector('.load');
   loader.style.display = 'none';
 
+//Detalle de cada canción
 
 let queryString = location.search;
 let queryStringToObject = new URLSearchParams(queryString);
@@ -19,6 +20,7 @@ let url= proxy + dcancion;
        .then(function(response){
            return response.json();
             })
+
        .then(function(data){
           console.log(data); 
 
@@ -36,8 +38,9 @@ let url= proxy + dcancion;
                        disco.innerText = data.album.title;  
                        disco.href = `detalle-album.html?id=${data.album.id}`;
 
+    //El player para escuchar la canción.La posibilidad de agregar la canción a “mi playlist”
               let player = document.querySelector('.player');
-                         player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
+                       player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
              
             
         artist.style.color = "white";
@@ -49,6 +52,8 @@ let url= proxy + dcancion;
           
          .catch(function (error){
              console.log('El error fue: ' + error);})
+
+
 
    //AGREGAR la lista de playlist de favoritos
      //necesitamos un array
@@ -91,24 +96,12 @@ let url= proxy + dcancion;
               console.log(localStorage);
              
             })
-            formulario.addEventListener('submit', function(e){
-              e.preventDefault();
+            
+        
       
-              if(buscador.value == ""){
-                alert.innerText = 'el campo esta vacio master';
-                closeIcon.style.display = 'inline'            
-              } else if( buscador.value.length < 3){
-      
-                alert.innerText = 'te pido el favor de poner mas de 3 caracteres';
-                  closeIcon.style.display = 'inline'
-              } else {
-                  this.submit();
-              }
-          })
-          buscador.addEventListener('input', function(){
-            alerta.innerText = '';
-            closeIcon.style.display = 'none';
-        })
+
+
+
 //Formulario
        
 let formulario = document.querySelector('.buscador');
