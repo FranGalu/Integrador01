@@ -1,21 +1,19 @@
-//La información de cada página de detalles debe provenir de forma dinámica desde la API. Para acceder a cada página de detalle deberán incorporar query strings en la URL (indicando qué número de artist/album/track) para obtener los datos puntuales desde la API.
-//Cada referencia en las páginas de detalle debe permitir navegación. Ejemplo: si en el detalle de canciones se ve el nombre de un artista al clickear sobre el nombre del artista el sitio debe llevarme al detalle del cantante.
-//Las canciones seleccionadas como favoritas deben guardarse en el storage del navegador. Si la canción fue seleccionada debe indicarse la posibilidad de quitarla de la playlist.
-
 
 let queryString = location.search;
 let queryStringToObject = new URLSearchParams(queryString);
 let id = queryStringToObject.get('id');
 
+//Definimos nuestros Endpoints.
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let artista = `https://api.deezer.com/artist/${id}`;
-let tracklist = `https://api.deezer.com/artist/${id}/albums?limit=5`
-let tracklistCompleta = `https://api.deezer.com/artist/${id}/top?limit=100`
+let albumesPopulares = `https://api.deezer.com/artist/${id}/albums?limit=5`
+let tracklistCompleta = `https://api.deezer.com/artist/${id}/top?limit=10000`
 
 let url = proxy + artista;
-let url2 = proxy + tracklist;
+let url2 = proxy + albumesPopulares;
 let url3 = proxy + tracklistCompleta;
 
+//Hacemos 3 fetchs. 
 fetch(url)
         .then( function(response){
             return response.json(); 
@@ -23,9 +21,11 @@ fetch(url)
         .then( function(data){
             console.log(data);
 
+            //Para modificar el DOM primero capturamos la imagen y el titulo.
             let nombre = document.querySelector('.O');
             let imagen = document.querySelector('.ozuna');
-                            
+
+            //Luego modificamos su contenido.                 
             imagen.src = data.picture_big;
             nombre.innerText = data.name
         })
@@ -42,10 +42,14 @@ fetch(url2)
         .then( function(data){
             console.log(data);
 
+            //Otra vez, vamos a capturar el elemento que queremos modificar luego.
             let trackContainer = document.querySelector('.re');
             let track = '';
        
+            //Vamos a tener que reccorrer el array para obtener nuestra informacion
             for (let i=0; i<data.data.length; i++){
+                
+                //Agregamos la estrucutra aca ya que es variable la informacion que recolectemos.
                 track += 
                         `<a class="blanco" href="detalle-album.html?id=${data.data[i].id}">
                             <li class="sin"> <p> ${data.data[i].title}</p>
@@ -53,6 +57,7 @@ fetch(url2)
                         </a>`
             }
             
+            //Finalmente modificamos su contenido. 
             trackContainer.innerHTML += track
         })
         
