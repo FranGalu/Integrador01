@@ -60,7 +60,7 @@ let url= proxy + dcancion;
           if(recuperoStorage != null){
             favoritos = JSON.parse(recuperoStorage);
           }
-           //Paso 9: Chequear que el id este en el array
+           //Paso 9: Chequear que el id este en el array y cambiar el texto
            if(favoritos.includes(id)){
              document.querySelector('.presione').innerText = "Quitar de mi playlist";
            }

@@ -11,6 +11,7 @@ let otra = document.querySelector('.otra');
   for (let i=0; i<favoritos.length; i++){
      buscarYMostrarFavoritos(favoritos[i]);
       }
+      
    function buscarYMostrarFavoritos(id){
      let proxy = 'https://cors-anywhere.herokuapp.com/';
      let playlist = `https://api.deezer.com/track/${id}`; 
