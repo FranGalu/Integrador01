@@ -173,7 +173,7 @@ text-align: center;
 }
 .dakiti {
     width: 500px;
-    padding: 40px;
+    padding: 10px;
 
 }
 .daki{
@@ -203,6 +203,12 @@ color: white;
     flex-wrap: wrap;
     flex-direction: column;
 }
+.artist{
+    font-size: 20px;
+}
+.album{
+    font-size: 20px;
+}
 /* -------------------- detalle-album.html -------------------- */
 
 .don {
@@ -215,7 +221,6 @@ color: white;
     padding: 3px;
     margin-right: 50px;
     font-size: 25px;
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row ;
  

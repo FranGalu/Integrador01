@@ -11,8 +11,8 @@ let id = queryStringToObject.get('id');
 
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
-let genre = `https://api.deezer.com/genre/${id}/artists`;
-let url1 = proxy + genre;
+
+
 
 let genre2 = `https://api.deezer.com/genre/${id}`;
 let url2 = proxy + genre2;
@@ -29,7 +29,7 @@ let url2 = proxy + genre2;
           nombre.innerText = data.name;
           imagen.src = data.picture_medium;
         })
-      
+
       .catch(function (error){
             console.log('El error fue: ' + error);
          })
@@ -43,6 +43,9 @@ let url1 = proxy + genre;
     })
     .then(function(data){
         console.log(data);
+
+
+        //capturamos lista
         let generosContainer = document.querySelector('.sacar');
         let generos = '';
         

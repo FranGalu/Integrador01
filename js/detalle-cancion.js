@@ -38,16 +38,16 @@ let url= proxy + dcancion;
                        disco.innerText = data.album.title;  
                        disco.href = `detalle-album.html?id=${data.album.id}`;
 
-    //El player para escuchar la canción.La posibilidad de agregar la canción a “mi playlist”
+    //El player para escuchar la canción.
               let player = document.querySelector('.player');
                        player.innerHTML += `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`; 
              
             
         artist.style.color = "white";
-        artist.style.fontSize = "40px"; 
+        artist.style.fontSize = "20px"; 
            
         disco.style.color = "white";
-        disco.style.fontSize = "40px";
+        disco.style.fontSize = "20px";
             })
           
          .catch(function (error){
@@ -55,43 +55,49 @@ let url= proxy + dcancion;
 
 
 
-   //AGREGAR la lista de playlist de favoritos
-     //necesitamos un array
+   //La posibilidad de agregar la canción a “mi playlist”
+
+     //Paso 1: necesitamos un array
              let favoritos = [];
-    //Recuperar datos del Storage
+    //Paso 8: Recuperar datos del Storage
             let recuperoStorage = localStorage.getItem('favoritos');
-          //AGREGAR info del local Storage en el array
+         
+
+            //Creamos un if por si hay información en el Storage
           if(recuperoStorage != null){
             favoritos = JSON.parse(recuperoStorage);
           }
-           //Quitar favoritos
+           //Paso 9: Chequear que el id este en el array y cambiar el texto
            if(favoritos.includes(id)){
              document.querySelector('.presione').innerText = "Quitar de mi playlist";
            }
 
-
+    //Paso 2: Capturamos donde vamos a poder guardar la información en nuestra variable
             let presione = document.querySelector('.presione');
             console.log(presione);
           
-            presione.style.color = "white";
-            presione.style.fontSize = "25px";
+                   presione.style.color = "white";
+                    presione.style.fontSize = "25px";
 
+    //Paso 3: Agregar al link un event listener con el evento click
             presione.addEventListener("click", function(e){
-              e.preventDefault();
+             //Paso 4: evitar comportamiento default
+               e.preventDefault();
 
               if(favoritos.includes(id)){
                   let idASacar = favoritos.indexOf(id);
                   favoritos.splice(idASacar,1);
                   document.querySelector('.presione').innerText = "Agregar a mi playlist";
               } else{
+                //Paso 5: Hacemos push para agregarle informacion a nuestro array
                   favoritos.push(id);
                   console.log(favoritos);
                   document.querySelector('.presione').innerText = "Quitar de mi playlist ";
             }
              
-             //necesitamos guardar la informacion en el storage
+             //Paso 6: necesitamos guardar la informacion en el storage
               let presioneParaStorage = JSON.stringify(favoritos);
-
+            //Paso 7: La metemos en el storage
               localStorage.setItem('favoritos', presioneParaStorage);
               console.log(localStorage);
              

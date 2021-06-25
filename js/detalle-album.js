@@ -7,6 +7,8 @@ window.addEventListener('load', function(){
     let loader = document.querySelector('.load');
     loader.style.display = 'none';
 
+    
+//objeto location y la propiedad search
 let queryString = location.search;
 let queryStringToObject = new URLSearchParams(queryString);
 let id = queryStringToObject.get('id');
@@ -31,15 +33,14 @@ let url = proxy + album;
 
         
         let artist = document.querySelector('.artista a');
-        artist.innerText += data.artist.name;
+        artist.innerText = data.artist.name;
         artist.href =  `detalle-artista.html?id=${data.artist.id}`
-
-        let genero = document.querySelector('.genero');
-        let genres = data.genres.data;
 
         let date = document.querySelector('.date');
         date.innerText = 'Fecha de lanzamiento: '+ data.release_date;
 
+        let genero = document.querySelector('.genero');
+        let genres = data.genres.data;
     
         
     for (let i = 0; i < genres.length; i++) {
@@ -47,20 +48,19 @@ let url = proxy + album;
                                 </a> ` 
             
         }
+
         let tracks = data.tracks.data;
         let lista = document.querySelector('.cancionesdon');
         
-    
-   
-        for(let i=0; i<tracks.length; i++){
+    for(let i=0; i<tracks.length; i++){
         
-                   lista.innerHTML += `
+             lista.innerHTML += `
                     
-                    <a class="blanco" href="detalle-cancion.html?id=${tracks[i].id}">
-                        <li class="don1"> 
-                        ${tracks[i].title} 
-                        </li>
-                    </a> `
+            <a class="blanco" href="detalle-cancion.html?id=${tracks[i].id}">
+                <li class="don1"> 
+                    ${tracks[i].title} 
+                </li>
+            </a> `
 
                  }
       })
@@ -76,7 +76,7 @@ let url = proxy + album;
     let closeIcon = document.querySelector('.alIcono');
  
     formulario.addEventListener('submit', function(e){
-        e.preventDefault();
+        e.preventDefault(); 
 
      if(buscador.value == ""){
        alert.innerText = 'el campo esta vacio master';
@@ -96,8 +96,6 @@ buscador.addEventListener('input', function(){
 })
 
 })
-
-    
 
        
  
