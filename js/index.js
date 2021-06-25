@@ -17,7 +17,7 @@ fetch(url1)
       .then( function(data){
           console.log(data);
           //Nos quedamos solo con el array de datos
-          let info = data.data
+          let info = data.data;
            // Obtenemos contendor
            let lista = document.querySelector('.canciones');
            //Definimos variable para poner el contenido
