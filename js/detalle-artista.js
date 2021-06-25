@@ -43,14 +43,14 @@ fetch(url2)
             console.log(data);
 
             //Otra vez, vamos a capturar el elemento que queremos modificar luego.
-            let trackContainer = document.querySelector('.re');
-            let track = '';
+            let topAlbumesContainer = document.querySelector('.re');
+            let topAlbumes = '';
        
             //Vamos a tener que reccorrer el array para obtener nuestra informacion
             for (let i=0; i<data.data.length; i++){
                 
                 //Agregamos la estrucutra aca ya que es variable la informacion que recolectemos.
-                track += 
+                topAlbumes += 
                         `<a class="blanco" href="detalle-album.html?id=${data.data[i].id}">
                             <li class="sin"> <p> ${data.data[i].title}</p>
                             </li>  
@@ -58,7 +58,7 @@ fetch(url2)
             }
             
             //Finalmente modificamos su contenido. 
-            trackContainer.innerHTML += track
+            topAlbumesContainer.innerHTML += topAlbumes
         })
         
         .catch(function (error){
